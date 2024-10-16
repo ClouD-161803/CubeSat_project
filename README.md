@@ -1,1 +1,1 @@
-This is our 3YP repository. Add any interesting changes to this file
+This is our 3YP on the Design of a CubeSat satellite for hypersonic re-entry into Earth's atmosphere
