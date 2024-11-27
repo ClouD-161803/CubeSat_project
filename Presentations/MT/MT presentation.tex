@@ -1,0 +1,112 @@
+\documentclass[hidelinks]{article}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START CUSTOM INCLUDES & DEFINITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\usepackage{amsmath}
+\usepackage{parskip} %noident everywhere
+\usepackage{hyperref} % Show hyperlinks - claudio
+\hypersetup{
+    colorlinks = true
+    linkcolor = blue
+    urlcolor = red
+    }
+% Block diagrams
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, calc}
+\tikzstyle{block} = [rectangle, draw,
+    text centered, rounded corners, minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{arrow} = [draw, -latex']
+\usepackage[left=0.75in, right=0.75in, top=1.75in, bottom=1in]{geometry}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END CUSTOM INCLUDES & DEFINITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\pdfobjcompresslevel=0
+%
+\title{\vspace{-4cm} Numerical Algorithms Report}
+\author{\vspace{-2cm} Claudio Vestini}
+\date{}
+\begin{document}
+\maketitle
+%
+\paragraph{Motivation}
+In this practical, we were tasked with using numerical approaches to estimate the value of $\pi$. The aim was to compare the performance of different methods; for meaningful benchmarking, floating point error had to be excluded from my analysis, which is why I evaluated all results by making use of the \texttt{Symbolic Math Toolbox}.
+%
+\paragraph{Monte-Carlo}
+This approach involved generating random samples in a square, then evaluating the fraction of samples contained within the inscribed circle (which is proportional to $\pi$).  see Appendix~\ref{appendix} for an in-depth explanation and graphs).
+\paragraph{Root-Finding}
+The second method of estimation relied on root-finding. In particular, I considered the function
+\[
+f(x) = \cos{(\frac{x}{2})}, \quad x \in [3,~4]
+\]
+which has a root at $x = \pi$. Using two separate methods (firstly Bisection and secondly Newton-Raphson), I obtained an approximated value of pi using a fixed number of iterations $N$.
+%
+\paragraph{Ramanujan}
+The last method I used is the well-known formula developed by Ramanujan in the early 20th century, where an approximation to $\pi$ is found by computing $N$ iterations in the series:
+\[
+\frac{1}{\pi} \approx \frac{2 \sqrt{2}}{9801} \sum_{k=0}^{N} \frac{(4k)! (1103 + 26390k)}{(k!)^4 396^{4k}}
+\]
+\paragraph{Performance Comparison}
+The three methods demonstrate a range of convergence speeds and computational efficiencies, with increasing specificity in their approach.
+
+The Monte-Carlo method is straightforward and versatile but converges relatively slowly, achieving only a rough estimate for \(\pi\) with moderate values of \(N\). Due to its reliance on random sampling, this method requires a very large number of samples for higher accuracy, as the error decreases at a rate proportional to \( \frac{1}{\sqrt{N}} \). Although simple to implement, it is the least efficient in terms of computational speed and precision, making it suitable mainly for exploratory purposes or scenarios where high precision is not critical.
+
+The root-finding approach, using either the bisection method or Newton-Raphson, offers faster convergence than Monte-Carlo. Bisection converges linearly, while Newton-Raphson exhibits quadratic convergence under the right conditions, making it significantly more efficient. However, these methods are more task-specific, as they rely on the choice of an appropriate function (e.g., \(\cos{\left(\frac{x}{2}\right)}\) for estimating \(\pi\)). This dependence limits the generality of root-finding methods but can yield a reasonably accurate estimate with fewer iterations.
+
+Finally, Ramanujan's series is the most specialized method, designed explicitly to compute \(\pi\) with extremely high efficiency. Each iteration in Ramanujan's series yields approximately eight additional correct digits of \(\pi\), allowing for rapid convergence to very high precision. This makes it the most computationally efficient approach for obtaining precise values of \(\pi\), especially in comparison to the slow convergence of the Monte-Carlo method and the function-specific nature of root-finding. However, it requires understanding and implementing a specific formula, making it less flexible but highly effective for high-precision applications.
+
+In summary, these methods exhibit increasing efficiency from Monte-Carlo to root-finding to Ramanujan’s series, with each step representing a more specialized approach. Ramanujan's series is by far the most efficient for accurately estimating \(\pi\) and is the preferred choice when high precision is needed.
+%
+\newpage
+\appendix{} \label{appendix}
+\section{Detailed explanation and Plots}
+\paragraph{Monte-Carlo Method}
+To approximate the value of $\pi$, we generate $N$ uniformly distributed samples $X_{i} \in \mathcal{D}$, then count the number of points $N_{circle}$ in $\mathcal{C}$, where $\mathcal{D}$ and $\mathcal{C}$ are defined as:
+\[
+\mathcal{D} = \{ (x, y) \in [-R, R] \times [-R, R] \}; \hspace{0.75cm} \mathcal{C} = \{(x, y) \mid x^2 + y^2 \leq R^2\}; \hspace{0.75cm} PDF:~f(x, y) = 
+\begin{cases} 
+\frac{1}{2R} & \forall~x,~y \in \mathcal{D}\\
+0  & otherwise \\
+\end{cases}
+\]
+Since we know the ratio of the area of a circle with radius $R$ to the area of the bounding square (side length $2R$), we can obtain an estimated value of $\pi$ as:
+\[
+\frac{N_{circle}}{N} \approx \frac{A_{circle}}{A_{square}} = \frac{\pi R^2}{(2R)^2} = \frac{\pi}{4} \implies \pi \approx 4 \frac{N_{circle}}{N}
+\]
+The probability of a point $X_i$ being in $\mathcal{C}$ is therefore $P(X_i \in \mathcal{C}) = p = \frac{\pi}{4}$ ($X_i \in \mathcal{C}$ is a binary operation here). For N samples, we can estimate the sample probability $\hat{p}$ and sample variance as $s$ as:
+\[
+\hat{p} = \frac{1}{N}\sum_{i=1}^{N} X_i \in \mathcal{C}; \hspace{0.75cm} s^2 = \frac{\hat{p}(1 - \hat{p})}{N - 1}
+\]
+Since we know the true variance to be:
+\[
+\sigma^2 = \mathrm{Var}(X_i \in \mathcal{C}) = \frac{p(1 - p)}{N} = \lim_{N \to \infty} s^2
+\]
+we can justify the use of sample variance as an estimator of accuracy in our approximation. It is then easy to spot that the error bounds will scale proportionally to $\frac{1}{\sqrt{N}}$. The results of the estimation are shown in the plots below:
+%
+\begin{figure}[h!]
+    \centering
+    
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{non_rounded_test.png}
+        \caption{Dykstra's algorithm on the box and line example}
+        \label{fig:nonRounded}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{rounded_test.png}
+        \caption{Rounded edges prevent algorithm from stalling}
+        \label{fig:Rounded}
+    \end{subfigure}
+    \caption{A demonstration of how roundedness reduces stalling}
+    \label{fig:stall}
+\end{figure}
+$$
+\end{document}
