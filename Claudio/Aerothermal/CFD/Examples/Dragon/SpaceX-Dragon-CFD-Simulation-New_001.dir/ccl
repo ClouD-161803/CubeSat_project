@@ -1,0 +1,281 @@
+LIBRARY:
+  MATERIAL: Air Ideal Gas
+    Material Description = Air Ideal Gas (constant Cp)
+    Material Group = Air Data, Calorically Perfect Ideal Gases
+    Option = Pure Substance
+    Thermodynamic State = Gas
+    PROPERTIES:
+      Option = General Material
+      EQUATION OF STATE:
+        Molar Mass = 28.96 [kg kmol^-1]
+        Option = Ideal Gas
+      END
+      SPECIFIC HEAT CAPACITY:
+        Option = Value
+        Specific Heat Capacity = 1.0044E+03 [J kg^-1 K^-1]
+        Specific Heat Type = Constant Pressure
+      END
+      REFERENCE STATE:
+        Option = Specified Point
+        Reference Pressure = 1 [atm]
+        Reference Specific Enthalpy = 0. [J/kg]
+        Reference Specific Entropy = 0. [J/kg/K]
+        Reference Temperature = 25 [C]
+      END
+      DYNAMIC VISCOSITY:
+        Dynamic Viscosity = 1.831E-05 [kg m^-1 s^-1]
+        Option = Value
+      END
+      THERMAL CONDUCTIVITY:
+        Option = Value
+        Thermal Conductivity = 2.61E-2 [W m^-1 K^-1]
+      END
+      ABSORPTION COEFFICIENT:
+        Absorption Coefficient = 0.01 [m^-1]
+        Option = Value
+      END
+      SCATTERING COEFFICIENT:
+        Option = Value
+        Scattering Coefficient = 0.0 [m^-1]
+      END
+      REFRACTIVE INDEX:
+        Option = Value
+        Refractive Index = 1.0 [m m^-1]
+      END
+    END
+  END
+  MATERIAL: Asteroid
+    Material Group = User
+    Option = Pure Substance
+    Thermodynamic State = Solid
+    PROPERTIES:
+      Option = General Material
+      EQUATION OF STATE:
+        Density = 2.71 [g cm^-3]
+        Molar Mass = 1.0 [kg kmol^-1]
+        Option = Value
+      END
+      SPECIFIC HEAT CAPACITY:
+        Option = Value
+        Specific Heat Capacity = 900 [J kg^-1 K^-1]
+      END
+    END
+  END
+END
+FLOW: Flow Analysis 1
+  SOLUTION UNITS:
+    Angle Units = [rad]
+    Length Units = [m]
+    Mass Units = [kg]
+    Solid Angle Units = [sr]
+    Temperature Units = [K]
+    Time Units = [s]
+  END
+  ANALYSIS TYPE:
+    Option = Steady State
+    EXTERNAL SOLVER COUPLING:
+      Option = None
+    END
+  END
+  DOMAIN: Default Domain
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = FLUID
+    BOUNDARY: Default Domain Default
+      Boundary Type = WALL
+      Location = BOTTOM,TOP
+      BOUNDARY CONDITIONS:
+        HEAT TRANSFER:
+          Option = Adiabatic
+        END
+        MASS AND MOMENTUM:
+          Option = No Slip Wall
+        END
+        WALL ROUGHNESS:
+          Option = Smooth Wall
+        END
+      END
+    END
+    BOUNDARY: Inlet
+      Boundary Type = INLET
+      Location = INLET
+      BOUNDARY CONDITIONS:
+        FLOW REGIME:
+          Option = Supersonic
+        END
+        HEAT TRANSFER:
+          Option = Static Temperature
+          Static Temperature = 25 [C]
+        END
+        MASS AND MOMENTUM:
+          Normal Speed = 500 [m s^-1]
+          Option = Normal Speed and Pressure
+          Relative Static Pressure = 0 [Pa]
+        END
+        TURBULENCE:
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END
+      END
+    END
+    BOUNDARY: Outlet
+      Boundary Type = OUTLET
+      Location = OUTLET
+      BOUNDARY CONDITIONS:
+        FLOW REGIME:
+          Option = Subsonic
+        END
+        MASS AND MOMENTUM:
+          Option = Average Static Pressure
+          Pressure Profile Blend = 0.05
+          Relative Pressure = 0 [Pa]
+        END
+        PRESSURE AVERAGING:
+          Option = Average Over Whole Outlet
+        END
+      END
+    END
+    BOUNDARY: SpaceXDragon
+      Boundary Type = WALL
+      Location = DRAGON
+      BOUNDARY CONDITIONS:
+        HEAT TRANSFER:
+          Option = Adiabatic
+        END
+        MASS AND MOMENTUM:
+          Option = No Slip Wall
+        END
+        WALL ROUGHNESS:
+          Option = Smooth Wall
+        END
+      END
+    END
+    BOUNDARY: Symmetry
+      Boundary Type = SYMMETRY
+      Location = SIDE1,SIDE2
+    END
+    DOMAIN MODELS:
+      BUOYANCY MODEL:
+        Option = Non Buoyant
+      END
+      DOMAIN MOTION:
+        Option = Stationary
+      END
+      MESH DEFORMATION:
+        Option = None
+      END
+      REFERENCE PRESSURE:
+        Reference Pressure = 1 [atm]
+      END
+    END
+    FLUID DEFINITION: Fluid 1
+      Material = Air Ideal Gas
+      Option = Material Library
+      MORPHOLOGY:
+        Option = Continuous Fluid
+      END
+    END
+    FLUID MODELS:
+      COMBUSTION MODEL:
+        Option = None
+      END
+      HEAT TRANSFER MODEL:
+        Include Viscous Work Term = On
+        Option = Total Energy
+      END
+      THERMAL RADIATION MODEL:
+        Option = None
+      END
+      TURBULENCE MODEL:
+        Option = RNG k epsilon
+      END
+      TURBULENT WALL FUNCTIONS:
+        High Speed Model = On
+        Option = Scalable
+      END
+    END
+  END
+  OUTPUT CONTROL:
+    RESULTS:
+      File Compression Level = Default
+      Option = Standard
+    END
+  END
+  SOLVER CONTROL:
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME:
+      Option = High Resolution
+    END
+    COMPRESSIBILITY CONTROL:
+      High Speed Numerics = On
+    END
+    CONVERGENCE CONTROL:
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 2000
+      Minimum Number of Iterations = 1
+      Timescale Control = Auto Timescale
+      Timescale Factor = 1.0
+    END
+    CONVERGENCE CRITERIA:
+      Residual Target = 1e-04
+      Residual Type = RMS
+    END
+    DYNAMIC MODEL CONTROL:
+      Global Dynamic Model Control = On
+    END
+    INTERPOLATION SCHEME:
+      Velocity Interpolation Type = Trilinear
+    END
+    INTERRUPT CONTROL:
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS:
+        Option = Default Conditions
+      END
+    END
+  END
+END
+COMMAND FILE:
+  Results Version = 24.2
+  Version = 15.0
+END
+SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Yes
+      Large Problem = No
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARALLEL HOST LIBRARY:
+      HOST DEFINITION: cloudsblade14
+        Remote Host Name = CLOUDS-BLADE14
+        Installation Root = C:\Program Files\ANSYS Inc\ANSYS Student\v%v\CFX
+        Host Architecture String = winnt-amd64
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = C:\Users\cvest\Claudio\Oxford\3rd \
+        Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\Space\
+        X-Dragon-CFD-Simulation-New.def
+      Solver Results File = C:\Users\cvest\Claudio\Oxford\3rd \
+        Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\Space\
+        X-Dragon-CFD-Simulation-New_001.res
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Maximum Number of Processes = 1
+        Start Method = Serial
+      END
+    END
+  END
+END

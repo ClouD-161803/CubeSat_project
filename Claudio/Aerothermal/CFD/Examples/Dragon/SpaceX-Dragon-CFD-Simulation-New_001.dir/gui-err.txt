@@ -1,0 +1,11 @@
+GUI INFORMATION:
+  RUN SETUP INFORMATION:
+    Run Name = SpaceX-Dragon-CFD-Simulation-New_001
+    Object Name = Run SpaceX Dragon CFD Simulation New 001
+    Full Run Prefix = C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\SpaceX-Dragon-CFD-Simulation-New_001
+    Working Directory = C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\SpaceX-Dragon-CFD-Simulation-New_001.dir
+    Output File = C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\SpaceX-Dragon-CFD-Simulation-New_001.out
+    Solver Input File = C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\SpaceX-Dragon-CFD-Simulation-New.def
+    Messages File = C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\SpaceX-Dragon-CFD-Simulation-New_001.dir\gui-err.txt
+  END
+END

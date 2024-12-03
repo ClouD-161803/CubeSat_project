@@ -1,0 +1,1016 @@
+ This run of the CFX 2024 R2 Solver started at 11:06:16 on 12 Nov 2024
+ by user cvest on CLOUDS-BLADE14 (amd_opteron.sse2_winnt) using the
+ command:
+ 
+  "C:\Program Files\ANSYS Inc\ANSYS Student\v242\CFX\bin\perllib\cfx5solve.pl"
+    -stdout-comms -batch -ccl -
+ 
+ 2024 R2
+ 
+  Point Releases and Patches installed:
+  Ansys Service Pack 2024 R2.10482996
+  Discovery 2024 R2.10482996
+  Core WB Files 2024 R2.10482996
+  Ansys Dynamic Reporting 2024 R2.10482996
+  SpaceClaim 2024 R2.10482996
+  CFX (includes CFD-Post) 2024 R2.10482996
+  Chemkin 2024 R2.10482996
+  EnSight 2024 R2.10482996
+  FENSAP-ICE 2024 R2.10482996
+  Fluent (includes CFD-Post) 2024 R2.10482996
+  Polyflow (includes CFD-Post) 2024 R2.10482996
+  Forte (includes EnSight) 2024 R2.10482996
+  TurboGrid 2024 R2.10482996
+  ACIS Geometry Interface 2024 R2.10482996
+  AutoCAD Geometry Interface 2024 R2.10482996
+  Catia, Version 4 Geometry Interface 2024 R2.10482996
+  Catia, Version 5 Geometry Interface 2024 R2.10482996
+  Catia, Version 6 Geometry Interface 2024 R2.10482996
+  Creo Elements/Direct Modeling Geometry Interface 2024 R2.10482996
+  Creo Parametric Geometry Interface 2024 R2.10482996
+  Inventor Geometry Interface 2024 R2.10482996
+  JTOpen Geometry Interface 2024 R2.10482996
+  NX Geometry Interface 2024 R2.10482996
+  Parasolid Geometry Interface  2024 R2.10482996
+  Solid Edge Geometry Interface 2024 R2.10482996
+  SOLIDWORKS Geometry Interface 2024 R2.10482996
+  Speos 2024 R2.10482996
+  Aqwa 2024 R2.10482996
+  Autodyn 2024 R2.10482996
+  Material Calibration App 2024 R2.10482996
+  Customization Files for User Programmable Features 2024 R2.10482996
+  Mechanical Products 2024 R2.10482996
+  Motion 2024 R2.10482996
+  Academic Student 2024 R2.10482996
+ 
+ Setting up CFX Solver run ...
+ 
+ 
+ +--------------------------------------------------------------------+
+ |                                                                    |
+ |                    CFX Command Language for Run                    |
+ |                                                                    |
+ +--------------------------------------------------------------------+
+ 
+ LIBRARY:
+   MATERIAL: Air Ideal Gas
+     Material Description = Air Ideal Gas (constant Cp)
+     Material Group = Air Data, Calorically Perfect Ideal Gases
+     Option = Pure Substance
+     Thermodynamic State = Gas
+     PROPERTIES:
+       Option = General Material
+       EQUATION OF STATE:
+         Molar Mass = 28.96 [kg kmol^-1]
+         Option = Ideal Gas
+       END
+       SPECIFIC HEAT CAPACITY:
+         Option = Value
+         Specific Heat Capacity = 1.0044E+03 [J kg^-1 K^-1]
+         Specific Heat Type = Constant Pressure
+       END
+       REFERENCE STATE:
+         Option = Specified Point
+         Reference Pressure = 1 [atm]
+         Reference Specific Enthalpy = 0. [J/kg]
+         Reference Specific Entropy = 0. [J/kg/K]
+         Reference Temperature = 25 [C]
+       END
+       DYNAMIC VISCOSITY:
+         Dynamic Viscosity = 1.831E-05 [kg m^-1 s^-1]
+         Option = Value
+       END
+       THERMAL CONDUCTIVITY:
+         Option = Value
+         Thermal Conductivity = 2.61E-2 [W m^-1 K^-1]
+       END
+       ABSORPTION COEFFICIENT:
+         Absorption Coefficient = 0.01 [m^-1]
+         Option = Value
+       END
+       SCATTERING COEFFICIENT:
+         Option = Value
+         Scattering Coefficient = 0.0 [m^-1]
+       END
+       REFRACTIVE INDEX:
+         Option = Value
+         Refractive Index = 1.0 [m m^-1]
+       END
+     END
+   END
+ END
+ FLOW: Flow Analysis 1
+   SOLUTION UNITS:
+     Angle Units = [rad]
+     Length Units = [m]
+     Mass Units = [kg]
+     Solid Angle Units = [sr]
+     Temperature Units = [K]
+     Time Units = [s]
+   END
+   ANALYSIS TYPE:
+     Option = Steady State
+     EXTERNAL SOLVER COUPLING:
+       Option = None
+     END
+   END
+   DOMAIN: Default Domain
+     Coord Frame = Coord 0
+     Domain Type = Fluid
+     Location = FLUID
+     BOUNDARY: Default Domain Default
+       Boundary Type = WALL
+       Location = BOTTOM,TOP
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Adiabatic
+         END
+         MASS AND MOMENTUM:
+           Option = No Slip Wall
+         END
+         WALL ROUGHNESS:
+           Option = Smooth Wall
+         END
+       END
+     END
+     BOUNDARY: Inlet
+       Boundary Type = INLET
+       Location = INLET
+       BOUNDARY CONDITIONS:
+         FLOW REGIME:
+           Option = Supersonic
+         END
+         HEAT TRANSFER:
+           Option = Static Temperature
+           Static Temperature = 25 [K]
+         END
+         MASS AND MOMENTUM:
+           Normal Speed = 500 [m s^-1]
+           Option = Normal Speed and Pressure
+           Relative Static Pressure = 0 [Pa]
+         END
+         TURBULENCE:
+           Option = Medium Intensity and Eddy Viscosity Ratio
+         END
+       END
+     END
+     BOUNDARY: Outlet
+       Boundary Type = OUTLET
+       Location = OUTLET
+       BOUNDARY CONDITIONS:
+         FLOW REGIME:
+           Option = Subsonic
+         END
+         MASS AND MOMENTUM:
+           Option = Average Static Pressure
+           Pressure Profile Blend = 0.05
+           Relative Pressure = 0 [Pa]
+         END
+         PRESSURE AVERAGING:
+           Option = Average Over Whole Outlet
+         END
+       END
+     END
+     BOUNDARY: SpaceXDragon
+       Boundary Type = WALL
+       Location = DRAGON
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Adiabatic
+         END
+         MASS AND MOMENTUM:
+           Option = No Slip Wall
+         END
+         WALL ROUGHNESS:
+           Option = Smooth Wall
+         END
+       END
+     END
+     BOUNDARY: Symmetry
+       Boundary Type = SYMMETRY
+       Location = SIDE1,SIDE2
+     END
+     DOMAIN MODELS:
+       BUOYANCY MODEL:
+         Option = Non Buoyant
+       END
+       DOMAIN MOTION:
+         Option = Stationary
+       END
+       MESH DEFORMATION:
+         Option = None
+       END
+       REFERENCE PRESSURE:
+         Reference Pressure = 1 [atm]
+       END
+     END
+     FLUID DEFINITION: Fluid 1
+       Material = Air Ideal Gas
+       Option = Material Library
+       MORPHOLOGY:
+         Option = Continuous Fluid
+       END
+     END
+     FLUID MODELS:
+       COMBUSTION MODEL:
+         Option = None
+       END
+       HEAT TRANSFER MODEL:
+         Include Viscous Work Term = True
+         Option = Total Energy
+       END
+       THERMAL RADIATION MODEL:
+         Option = None
+       END
+       TURBULENCE MODEL:
+         Option = RNG k epsilon
+       END
+       TURBULENT WALL FUNCTIONS:
+         High Speed Model = On
+         Option = Scalable
+       END
+     END
+   END
+   OUTPUT CONTROL:
+     RESULTS:
+       File Compression Level = Default
+       Option = Standard
+     END
+   END
+   SOLVER CONTROL:
+     Turbulence Numerics = First Order
+     ADVECTION SCHEME:
+       Option = High Resolution
+     END
+     COMPRESSIBILITY CONTROL:
+       High Speed Numerics = On
+     END
+     CONVERGENCE CONTROL:
+       Length Scale Option = Conservative
+       Maximum Number of Iterations = 1000
+       Minimum Number of Iterations = 1
+       Timescale Control = Auto Timescale
+       Timescale Factor = 1.0
+     END
+     CONVERGENCE CRITERIA:
+       Residual Target = 1.E-4
+       Residual Type = RMS
+     END
+     DYNAMIC MODEL CONTROL:
+       Global Dynamic Model Control = On
+     END
+     INTERPOLATION SCHEME:
+       Velocity Interpolation Type = Trilinear
+     END
+     INTERRUPT CONTROL:
+       Option = Any Interrupt
+       CONVERGENCE CONDITIONS:
+         Option = Default Conditions
+       END
+     END
+   END
+ END
+ COMMAND FILE:
+   Version = 24.2
+   Results Version = 24.2
+ END
+ SIMULATION CONTROL:
+   EXECUTION CONTROL:
+     EXECUTABLE SELECTION:
+       Double Precision = Yes
+       Large Problem = No
+     END
+     INTERPOLATOR STEP CONTROL:
+       Runtime Priority = Standard
+       MEMORY CONTROL:
+         Memory Allocation Factor = 1.0
+         Option = Model Based
+       END
+     END
+     PARALLEL HOST LIBRARY:
+       HOST DEFINITION: cloudsblade14
+         Remote Host Name = CLOUDS-BLADE14
+         Installation Root = C:\Program Files\ANSYS Inc\ANSYS Student\v%v\CFX
+         Host Architecture String = winnt-amd64
+       END
+     END
+     RUN DEFINITION:
+       Run Mode = Full
+       Solver Input File = C:\Users\cvest\Claudio\Oxford\3rd \
+         Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\Space\
+         X-Dragon-CFD.def
+       Solver Results File = C:\Users\cvest\Claudio\Oxford\3rd \
+         Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\Space\
+         X-Dragon-CFD_001.res
+     END
+     SOLVER STEP CONTROL:
+       Runtime Priority = Standard
+       MEMORY CONTROL:
+         Memory Allocation Factor = 1.0
+         Option = Model Based
+       END
+       PARALLEL ENVIRONMENT:
+         Maximum Number of Processes = 1
+         Start Method = Serial
+       END
+     END
+   END
+ END
+ 
+ 
+ +--------------------------------------------------------------------+
+ |                                                                    |
+ |                               Solver                               |
+ |                                                                    |
+ +--------------------------------------------------------------------+
+ 
+
+
+
+ +--------------------------------------------------------------------+
+ |                                                                    |
+ |                       ANSYS(R) CFX(R) Solver                       |
+ |                                                                    |
+ | 2024 R2                                                            |
+ | Build 24.2 2024-05-13T11:42:54.771873                              |
+ | Mon May 13 12:23:24 PDT 2024                                       |
+ |                                                                    |
+ |                        Executable Attributes                       |
+ |                                                                    |
+ |           double-64bit-int32-archfort-optimised-std-lcomp          |
+ |                                                                    |
+ | (C) 1996-2024 ANSYS, Inc.                                          |
+ |                                                                    |
+ | All rights reserved. Unauthorized use, distribution or duplication |
+ | is prohibited. This product is subject to U.S. laws governing      |
+ | export and re-export. For full Legal Notice, see documentation.    |
+ +--------------------------------------------------------------------+
+
+
+
+
+ +--------------------------------------------------------------------+
+ |                  Job Information at Start of Run                   |
+ +--------------------------------------------------------------------+
+
+ Run mode:       serial run
+
+ Host computer:  CLOUDS-BLADE14 (PID:46336)
+
+ Job started:    Tue Nov 12 11:06:19 2024
+
+ +--------------------------------------------------------------------+
+ |                        License Information                         |
+ +--------------------------------------------------------------------+
+ 
+ License Cap:    ANSYS CFD Solver
+ License ID:     ClouDs-Blade14-cvest-66004-000021
+
+ INFO: You are using an academic student license which enables meshes 
+       up to 1000000 vertices.
+
+ INFO: Your license enables 4-way parallel execution.
+       For faster simulations, please start the application with the
+       appropriate parallel options.
+
+
+ +--------------------------------------------------------------------+
+ |         Initial Memory Allocation  (Actual usage may vary)         |
+ +--------------------------------------------------------------------+
+
+           | Real       | Integer    | Character | Logical  | Double
+ ----------+------------+------------+-----------+----------+----------
+ Mwords    |     127.12 |      46.30 |      9.31 |     0.12 |     0.01
+ Mbytes    |     969.86 |     176.62 |      8.88 |     0.46 |     0.06
+ ----------+------------+------------+-----------+----------+----------
+
+
+ +--------------------------------------------------------------------+
+ |            Host Memory Information (Mbytes): Solver                |
+ +--------------------------------------------------------------------+
+ |          Host           |     System     |   Allocated    |   %    |
+ +-------------------------+----------------+----------------+--------+
+ | CLOUDS-BLADE14          |     15774.60   |      1155.87   |   7.33 |
+ +-------------------------+----------------+----------------+--------+
+
+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The Wall Heat Transfer Coefficient written to the results file for |
+ | any turbulent phase with heat transfer is based on the turbulent   |
+ | wall function coefficient. It is consistent with the Wall Heat Flux|
+ | the wall temperature, and the Wall Adjacent Temperature            |
+ | (near-wall temperature).  If you would like it to be based on a    |
+ | user-specified bulk temperature instead, please set the expert     |
+ | parameter "tbulk for htc = <value>".                               |
+ +--------------------------------------------------------------------+
+
+ +--------------------------------------------------------------------+
+ |                      Topology Simplification                       |
+ +--------------------------------------------------------------------+
+
+ +--------------------------------------------------------------------+
+ |                       ****** Warning ******                        |
+ |                                                                    |
+ | Topology simplification is activated with the following            |
+ | restrictions:                                                      |
+ |                                                                    |
+ | - Mesh regions referenced only within User Fortran and NOT         |
+ |   in the command file will cause the solver to stop.               |
+ | - The solver will stop during any "Edit Run in Progress" step      |
+ |   if new 2D regions are referenced.                                |
+ +--------------------------------------------------------------------+
+
+ +--------------------------------------------------------------------+
+ |                          Mesh Statistics                           |
+ +--------------------------------------------------------------------+
+ | Domain Name          | Orthog. Angle | Exp. Factor  | Aspect Ratio |
+ +----------------------+---------------+--------------+--------------+
+ |                      | Minimum [deg] |   Maximum    |    Maximum   |
+ +----------------------+---------------+--------------+--------------+
+ | Default Domain       |       12.7  ! |     10348  ! |        20 OK |
+ +----------------------+---------------+--------------+--------------+
+ |                      |  %!  %ok  %OK | %!  %ok  %OK | %!  %ok  %OK |
+ +----------------------+---------------+--------------+--------------+
+ | Default Domain       |  <1    1   99 | <1    8   92 |  0    0  100 |
+ +----------------------+---------------+--------------+--------------+
+
+ Domain Name : Default Domain
+
+     Total Number of Nodes                                =      325822
+
+     Total Number of Elements                             =     1687654
+         Total Number of Tetrahedrons                     =     1589502
+         Total Number of Prisms                           =       97307
+         Total Number of Pyramids                         =         845
+
+     Total Number of Faces                                =       38306
+
+ +--------------------------------------------------------------------+
+ |                     Average Scale Information                      |
+ +--------------------------------------------------------------------+
+
+ Domain Name : Default Domain
+     Global Length                                         = 3.0736E+03
+     Minimum Extent                                        = 2.3235E+03
+     Maximum Extent                                        = 3.7823E+03
+     Density                                               = 1.4117E+01
+     Dynamic Viscosity                                     = 1.8310E-05
+     Velocity                                              = 5.0000E+02
+     Advection Time                                        = 6.1473E+00
+     Reynolds Number                                       = 1.1849E+12
+     Speed of Sound                                        = 1.0025E+02
+     Mach Number                                           = 4.9874E+00
+     Thermal Conductivity                                  = 2.6100E-02
+     Specific Heat Capacity at Constant Pressure           = 1.0044E+03
+     Specific Heat Capacity at Constant Volume             = 7.1730E+02
+     Specific Heat Ratio                                   = 1.4003E+00
+     Prandtl Number                                        = 7.0462E-01
+
+ +--------------------------------------------------------------------+
+ |                Checking for Isolated Fluid Regions                 |
+ +--------------------------------------------------------------------+
+ 
+ No isolated fluid regions were found.
+
+ +--------------------------------------------------------------------+
+ |              The Equations Solved in This Calculation              |
+ +--------------------------------------------------------------------+
+
+ Subsystem : Momentum and Mass
+
+   U-Mom
+   V-Mom
+   W-Mom
+   P-Mass
+
+ Subsystem : Heat Transfer
+
+   H-Energy
+
+ Subsystem : TurbKE and Diss.K
+
+   K-TurbKE
+   E-Diss.K
+                   
+ CFD Solver started: Tue Nov 12 11:06:24 2024
+
+
+ +--------------------------------------------------------------------+
+ |                       Convergence History                          |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  4.987E+00.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ |                        Timescale Information                       |
+ ----------------------------------------------------------------------
+ |       Equation       |         Type          |      Timescale      |
+ +----------------------+-----------------------+---------------------+
+ | U-Mom                | Auto Timescale        |     1.84419E+00     |
+ | V-Mom                | Auto Timescale        |     1.84419E+00     |
+ | W-Mom                | Auto Timescale        |     1.84419E+00     |
+ | P-Mass               | Auto Timescale        |     1.84419E+00     |
+ +----------------------+-----------------------+---------------------+
+ | H-Energy             | Auto Timescale        |     1.84419E+00     |
+ +----------------------+-----------------------+---------------------+
+ | K-TurbKE             | Auto Timescale        |     1.84419E+00     |
+ | E-Diss.K             | Auto Timescale        |     1.84419E+00     |
+ +----------------------+-----------------------+---------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    1                    CPU SECONDS = 5.860E+00
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                | 0.00 | 2.2E-03 | 2.1E-02 |       5.2E-03  OK|
+ | V-Mom                | 0.00 | 4.9E-05 | 5.9E-04 |       1.8E+01  ok|
+ | W-Mom                | 0.00 | 2.8E-04 | 8.7E-03 |       4.7E-02  OK|
+ | P-Mass               | 0.00 | 7.2E-03 | 5.5E-02 |  8.7  1.4E-02  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : Default Domain Default                        |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : Default Domain Default                        |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ | H-Energy             | 0.00 | 3.1E-08 | 3.6E-06 |  5.4  2.4E-02  OK|
+ +----------------------+------+---------+---------+------------------+
+ | K-TurbKE             | 0.00 | 2.0E+00 | 2.0E+00 |  5.4  6.8E-17  OK|
+ | E-Diss.K             | 0.00 | 1.9E+04 | 1.9E+04 | 12.8  6.0E-17  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  5.278E+00.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    2                    CPU SECONDS = 4.038E+01
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                | 0.02 | 3.9E-05 | 7.7E-04 |       2.8E-02  OK|
+ | V-Mom                | 0.78 | 3.9E-05 | 8.1E-04 |       1.1E-01  ok|
+ | W-Mom                | 0.07 | 1.8E-05 | 2.8E-04 |       1.9E-01  ok|
+ | P-Mass               | 0.02 | 1.3E-04 | 3.4E-03 | 43.3  5.7E-01  ok|
+ +----------------------+------+---------+---------+------------------+
+ | H-Energy             |99.99 | 5.6E-03 | 8.0E-01 |  5.4  9.4E-03  OK|
+ +----------------------+------+---------+---------+------------------+
+ | K-TurbKE             | 0.01 | 2.0E-02 | 3.4E-01 |  5.4  1.4E-04  OK|
+ | E-Diss.K             | 0.00 | 3.6E-03 | 1.9E-01 | 12.9  7.1E-17  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  9.616E+01.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    3                    CPU SECONDS = 7.313E+01
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                |30.02 | 1.2E-03 | 6.3E-02 |       1.2E-02  OK|
+ | V-Mom                |30.66 | 1.2E-03 | 5.6E-02 |       8.8E-03  OK|
+ | W-Mom                |99.99 | 4.1E-03 | 7.3E-01 |       8.6E-03  OK|
+ | P-Mass               |99.99 | 2.3E-02 | 1.0E+01 | 20.2  8.6E-02  OK|
+ +----------------------+------+---------+---------+------------------+
+ | H-Energy             | 0.81 | 4.6E-03 | 8.6E-01 |  5.5  9.9E-03  OK|
+ +----------------------+------+---------+---------+------------------+
+ | K-TurbKE             | 0.26 | 5.1E-03 | 4.5E-01 |  5.5  4.8E-03  OK|
+ | E-Diss.K             | 1.80 | 6.4E-03 | 9.5E-01 | 12.9  2.4E-10  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  8.624E+01.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    4                    CPU SECONDS = 1.006E+02
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                | 0.51 | 5.9E-04 | 3.9E-02 |       1.9E-01  ok|
+ | V-Mom                | 0.46 | 5.4E-04 | 6.4E-02 |       1.6E-01  ok|
+ | W-Mom                | 0.63 | 2.6E-03 | 2.3E-01 |       1.3E-01  ok|
+ | P-Mass               | 0.35 | 8.0E-03 | 1.4E+00 |  4.8  7.8E-02  OK|
+ +----------------------+------+---------+---------+------------------+
+ | H-Energy             | 4.91 | 2.2E-02 | 2.8E+00 |  5.5  3.9E-03  OK|
+ +----------------------+------+---------+---------+------------------+
+ | K-TurbKE             | 0.88 | 4.5E-03 | 7.1E-01 |  5.5  1.7E-02  OK|
+ | E-Diss.K             | 0.77 | 5.0E-03 | 7.9E-01 | 12.9  8.9E-07  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  1.303E+02.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    5                    CPU SECONDS = 1.291E+02
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                | 0.10 | 5.9E-05 | 5.7E-03 |       1.0E-03  OK|
+ | V-Mom                | 0.11 | 6.1E-05 | 6.6E-03 |       1.1E-03  OK|
+ | W-Mom                | 0.05 | 1.3E-04 | 1.9E-02 |       6.3E-04  OK|
+ | P-Mass               | 0.00 | 9.1E-06 | 3.2E-03 | 43.3  1.0E-01  OK|
+ +----------------------+------+---------+---------+------------------+
+ | H-Energy             | 0.20 | 4.5E-03 | 5.7E-01 |  5.5  1.7E-02  OK|
+ +----------------------+------+---------+---------+------------------+
+ | K-TurbKE             | 0.38 | 1.7E-03 | 9.7E-01 |  5.5  2.9E-02  OK|
+ | E-Diss.K             | 0.88 | 4.4E-03 | 9.6E-01 | 25.0  3.2E-05  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  7.916E+03.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ |                        Timescale Information                       |
+ ----------------------------------------------------------------------
+ |       Equation       |         Type          |      Timescale      |
+ +----------------------+-----------------------+---------------------+
+ | U-Mom                | Auto Timescale        |     9.19835E-01     |
+ | V-Mom                | Auto Timescale        |     9.19835E-01     |
+ | W-Mom                | Auto Timescale        |     9.19835E-01     |
+ | P-Mass               | Auto Timescale        |     9.19835E-01     |
+ +----------------------+-----------------------+---------------------+
+ | H-Energy             | Auto Timescale        |     9.19835E-01     |
+ +----------------------+-----------------------+---------------------+
+ | K-TurbKE             | Auto Timescale        |     9.19835E-01     |
+ | E-Diss.K             | Auto Timescale        |     9.19835E-01     |
+ +----------------------+-----------------------+---------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    6                    CPU SECONDS = 1.674E+02
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                |28.82 | 1.7E-03 | 2.0E-01 |       5.3E-04  OK|
+ | V-Mom                |21.13 | 1.3E-03 | 1.1E-01 |       5.3E-04  OK|
+ | W-Mom                |28.51 | 3.8E-03 | 5.6E-01 |       5.2E-04  OK|
+ | P-Mass               |99.99 | 1.1E-03 | 3.9E-01 | 12.5  4.2E+00  F |
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ | H-Energy             | 0.85 | 3.8E-03 | 4.0E-01 |  5.5  2.6E-03  OK|
+ +----------------------+------+---------+---------+------------------+
+ | K-TurbKE             | 2.81 | 4.9E-03 | 1.1E+00 |  5.5  1.2E-02  OK|
+ | E-Diss.K             | 2.20 | 9.7E-03 | 1.0E+00 | 85.3  4.7E-17  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  6.627E+03.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    7                    CPU SECONDS = 2.011E+02
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                | 0.29 | 4.9E-04 | 2.8E-02 |       1.0E-02  OK|
+ | V-Mom                | 0.63 | 8.1E-04 | 5.6E-02 |       6.2E-03  OK|
+ | W-Mom                | 0.28 | 1.1E-03 | 1.1E-01 |       4.8E-03  OK|
+ | P-Mass               | 0.01 | 1.5E-05 | 8.4E-03 |  8.7  7.6E+00  F |
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ |  A wall has been placed at portion(s) of an OUTLET                 |
+ |  boundary condition (at  46.3% of the faces,  37.8% of the area)   |
+ |  to prevent fluid from flowing into the domain.                    |
+ |  The boundary condition name is: Outlet.                           |
+ |  The fluid name is: Fluid 1.                                       |
+ |  If this situation persists, consider switching                    |
+ |  to an Opening type boundary condition instead.                    |
+ +--------------------------------------------------------------------+
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ | H-Energy             | 0.81 | 3.1E-03 | 3.4E-01 |  5.6  1.5E-03  OK|
+ +----------------------+------+---------+---------+------------------+
+ | K-TurbKE             | 0.73 | 3.5E-03 | 6.7E-01 |  5.6  2.4E-03  OK|
+ | E-Diss.K             | 3.09 | 3.0E-02 | 1.3E+01 |103.5  1.8E-18  OK|
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ | Notice: The maximum Mach number is  2.355E+04.                     |
+ +--------------------------------------------------------------------+
+
+ ======================================================================
+ OUTER LOOP ITERATION =    8                    CPU SECONDS = 2.284E+02
+ ----------------------------------------------------------------------
+ |       Equation       | Rate | RMS Res | Max Res |  Linear Solution |
+ +----------------------+------+---------+---------+------------------+
+ | U-Mom                | 0.00 | 1.2E-06 | 1.3E-04 |       5.5E-03  OK|
+ | V-Mom                | 0.00 | 1.2E-06 | 1.5E-04 |       3.5E-03  OK|
+ | W-Mom                | 0.00 | 1.2E-06 | 1.7E-04 |       7.7E-04  OK|
+ | P-Mass               | 0.00 | 2.7E-12 | 1.4E-09 | 27.9  1.9E+02  F |
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ |  A wall has been placed at portion(s) of an OUTLET                 |
+ |  boundary condition (at  20.2% of the faces,  31.3% of the area)   |
+ |  to prevent fluid from flowing into the domain.                    |
+ |  The boundary condition name is: Outlet.                           |
+ |  The fluid name is: Fluid 1.                                       |
+ |  If this situation persists, consider switching                    |
+ |  to an Opening type boundary condition instead.                    |
+ +--------------------------------------------------------------------+
+ +----------------------+------+---------+---------+------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ +--------------------------------------------------------------------+
+ |                     ****** Notice ******                           |
+ | The non-dimensional near wall temperature (T+) has been clipped    |
+ | for calculation of Wall Heat Transfer Coefficient.                 |
+ |                                                                    |
+ | Boundary Condition : SpaceXDragon                                  |
+ | T+ clip value      =  1.0000E-10                                   |
+ |                                                                    |
+ | If this situation persists and you are using the High Speed Model, |
+ | consider enabling Mach number based blending between low speed and |
+ | high speed wall functions.  You can do so by specifying a Mach     |
+ | number threshold as follows:                                       |
+ |                                                                    |
+ | EXPERT PARAMETERS:                                                 |
+ |   highspeed wf mach threshold = 0.1     # default=0.0 (off)        |
+ | END                                                                |
+ +--------------------------------------------------------------------+
+ 
+ +--------------------------------------------------------------------+
+ | ERROR #004100018 has occurred in subroutine FINMES.                |
+ | Message:                                                           |
+ | Fatal overflow in linear solver.                                   |
+ +--------------------------------------------------------------------+
+
+ +--------------------------------------------------------------------+
+ |                An error has occurred in cfx5solve:                 |
+ |                                                                    |
+ | The ANSYS CFX solver exited with return code 1.   No results file  |
+ | has been created.                                                  |
+ +--------------------------------------------------------------------+
+
+End of solution stage.
+
+ +--------------------------------------------------------------------+
+ | The following user files have been saved in the directory          |
+ | C:\Users\cvest\Claudio\Oxford\3rd                                  |
+ | Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\Examples\Dragon\S- |
+ | paceX-Dragon-CFD_001:                                              |
+ |                                                                    |
+ | mon                                                                |
+ +--------------------------------------------------------------------+
+
+
+ +--------------------------------------------------------------------+
+ |                              Warning!                              |
+ |                                                                    |
+ | After waiting for 60 seconds, 1 solver manager process(es) appear  |
+ | not to have noticed that this run has ended.  You may get errors   |
+ | removing some files if they are still open in the solver manager.  |
+ +--------------------------------------------------------------------+
+
+
+ +--------------------------------------------------------------------+
+ |                An error has occurred in cfx5solve:                 |
+ |                                                                    |
+ | After 3 attempts: Unable to remove working directory: Permission   |
+ | denied                                                             |
+ +--------------------------------------------------------------------+
+
+
+This run of the ANSYS CFX Solver has finished.
