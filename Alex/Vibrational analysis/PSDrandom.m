@@ -16,7 +16,7 @@ for i = 1:num
     j = 1;
 
     %find random frequency in range of PSD
-    frequency = range*rand;
+    frequency = range*0.0109563;    %0.0109563 replace with rand in 2 floor case for natural frequency test
     %convert to radians and assign to signal
     randomSignals(1,i) = 2*pi*frequency;
 
@@ -26,7 +26,6 @@ for i = 1:num
 
             %linearly interpolates acceleration from PSD points 
             acceleration = g *(points(2,j)+ ((frequency-points(1,j))/(points(1,j+1)-points(1,j))) * (points(2,j+1)-points(2,j)));
-            
             randomSignals(2,i) = sqrt(acceleration);
 
             break

@@ -9,7 +9,7 @@ height = 200*10^(-3);%length of cubesat -mm
 mass = 12; %mass of cubesat, distributed evenly between floors - kg
     %estimated off of 1.5kg/1U of cubesat
     
-floors = 5; %number of "floors" of the cubesat
+floors = 2; %number of "floors" of the cubesat
 
 props = 4; %vertical supports per layer of depth
 
@@ -23,7 +23,7 @@ L = height/(floors - 1); %Length of individual prop - m
 
 K = ((props^2)*(12*E*I))/(L^3); %"Spring constant" per floor - N/m
 
-m = mass/(2*(floors-2) + 2); %mass per floor - kg
+m = mass/floors; %mass per floor - kg
                              %modelled as each internal "floor" having
                              %twice the weight
 
@@ -38,12 +38,12 @@ natFreqs = sqrt(eig(Kmatrix)/(m))/(2*pi);
 PSDpoints = [0 20 50 150 300 800 2000; 
             0.013 0.013 0.03 0.03 0.005 0.005 0.01];
 
-signals = PSDrandom(PSDpoints,3);
+signals = PSDrandom(PSDpoints,1);
 
 %Simulate
 
 %number of time steps
-n = 1000;
+n = 20000;
 %time step
 t = 0.00025;
 
@@ -60,15 +60,15 @@ vel = 0;
 
 displacements = zeros([floors,n]);
 time = zeros(1,n);
-
-
+%accelerations = zeros(1,n); %impulse response
+%accelerations(1) = 1;
 %find displacements 
 
 for step = 1:n
 
     
      time(step) = step*t;
-     aVector = transpose([accelerations(step) 0 0 0 0] );
+     aVector = transpose([accelerations(step) 0]);
 
     if step == 1
 
@@ -80,9 +80,9 @@ for step = 1:n
     
     if step > 1
 
-        internalAccel = Mmatrix\Kmatrix*displacements(:,step - 1) - aVector;
-        vel = vel + (internalAccel + aVector)*t; 
-        displacements(:,step) = displacements(:,step - 1) - vel*t - displacements(1,step - 1);
+        internalAccel = (Mmatrix\Kmatrix*displacements(:,step - 1)) ;
+        vel = vel - (internalAccel + aVector)*t; 
+        displacements(:,step) = displacements(:,step - 1) + vel*t - displacements(1,step - 1) ;
         
     end
 
@@ -93,12 +93,14 @@ end
 
 colours = ["c","g","y","m","r","b","k"];
 for c = 1:floors
-
-    plot(time,displacements(c,:),colours(c));
-    hold on
+ 
+     plot(displacements(c,:),time,colours(c));
+     hold on
 end
-
-
-
 xlabel("Displacement/m")
 ylabel("Time/s")
+legend("Floor 1","Floor 2","Floor 3","Floor 4","Floor 5")
+
+%figure
+
+%plot(accelerations,time)
