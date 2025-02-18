@@ -43,7 +43,7 @@ signals = PSDrandom(PSDpoints,1);
 %Simulate
 
 %number of time steps
-n = 20000;
+n = 4000;
 %time step
 t = 0.00025;
 
@@ -82,11 +82,27 @@ for step = 1:n
 
         internalAccel = (Mmatrix\Kmatrix*displacements(:,step - 1)) ;
         vel = vel - (internalAccel + aVector)*t; 
-        displacements(:,step) = displacements(:,step - 1) + vel*t - displacements(1,step - 1) ;
+        displacements(:,step) = displacements(:,step - 1) + vel*t;
+        displacements(:,step) = displacements(:,step) - displacements(1,step);
         
     end
 
 end
+
+
+
+
+%validation
+val_displacements = zeros(1,n);
+
+for step = 1:n
+
+    val_displacements(step) = (m*accelerations(step)*step*t)/(mass*natFreqs(2)*2*pi);
+
+end
+
+
+
 
 [maxDisplacement,I] = max(abs(displacements),[],"all");
 
@@ -100,6 +116,9 @@ end
 xlabel("Displacement/m")
 ylabel("Time/s")
 legend("Floor 1","Floor 2","Floor 3","Floor 4","Floor 5")
+
+%plot validation
+plot(val_displacements,time,"b");
 
 %figure
 
