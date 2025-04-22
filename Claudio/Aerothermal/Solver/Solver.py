@@ -170,6 +170,10 @@ def create_heat_shield_simulation():
     plot_results(time_points, temperature_profiles, x, ORBITAL_PERIOD, 
                 materials, thicknesses, surface_temps, back_temps, total_heat_flux)
     
+    # ===== EXPORT DATA =====
+    export_data_to_file(time_points, temperature_profiles, x, ORBITAL_PERIOD,
+                      surface_temps, back_temps, total_heat_flux)
+    
     # ===== SUMMARY STATISTICS =====
     print_summary(time_points, temperature_profiles, surface_temps, back_temps, 
                  layer_indices, materials, max_service_temps, simulation_time, num_orbits)
@@ -452,6 +456,60 @@ def print_summary(time_points, temperature_profiles, surface_temps, back_temps,
     
     print(f"\nMaximum thermal gradient: {max_gradient:.1f}°C/node")
     print("===== END SUMMARY =====")
+
+
+def export_data_to_file(time_points, temperature_profiles, x, orbital_period, surface_temps, back_temps, total_heat_flux, filename="cubesat_simulation_data.txt"):
+    """Export simulation data to a tab-delimited text file for two orbital periods"""
+    import numpy as np
+    
+    # Filter data for only the first two orbital periods
+    max_time = 2 * orbital_period
+    indices = np.where(time_points <= max_time)[0]
+    
+    filtered_time = time_points[indices]
+    filtered_temp_profiles = temperature_profiles[indices]
+    filtered_surface_temps = np.array(surface_temps)[indices]
+    filtered_back_temps = np.array(back_temps)[indices]
+    filtered_heat_flux = np.array(total_heat_flux)[indices]
+    
+    # Normalize time to orbital period
+    normalized_time = (filtered_time % orbital_period) / orbital_period
+    orbital_period_num = np.floor(filtered_time / orbital_period) + 1
+    
+    # Select depths for output
+    depth_indices = [0, len(x)//4, len(x)//2, 3*len(x)//4, -1]
+    depths_mm = [x[idx] * 1000 for idx in depth_indices]
+    
+    # Open file for writing
+    with open(filename, 'w') as f:
+        # Write header row
+        header = ["time(s)", "orbit_num", "normalized_time", "surface_temp(C)", "back_temp(C)", "heat_flux(W/m2)"]
+        
+        # Add headers for intermediate points
+        for depth in depths_mm:
+            header.append(f"temp_at_{depth:.1f}mm(C)")
+        
+        f.write("\t".join(header) + "\n")
+        
+        # Write data rows
+        for i in range(len(filtered_time)):
+            row = [
+                f"{filtered_time[i]:.2f}",  # time in seconds
+                f"{orbital_period_num[i]:.0f}",  # orbit number
+                f"{normalized_time[i]:.4f}",  # normalized time within orbit
+                f"{filtered_surface_temps[i]:.2f}",  # surface temperature
+                f"{filtered_back_temps[i]:.2f}",  # back temperature
+                f"{filtered_heat_flux[i]:.2f}"  # heat flux
+            ]
+            
+            # Add temperatures at selected depths
+            for idx in depth_indices:
+                row.append(f"{filtered_temp_profiles[i][idx]:.2f}")
+                
+            f.write("\t".join(row) + "\n")
+            
+    print(f"Data for two orbital periods exported to {filename}")
+
 
 if __name__ == "__main__":
     create_heat_shield_simulation()
