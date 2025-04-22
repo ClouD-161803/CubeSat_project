@@ -1,0 +1,315 @@
+Auto-Transcript Start Time:  07:38:56, 21 Apr 2025 GMT Daylight Time 
+Current Directory: "C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\2d Sim\No Refinement\With new many axes\Isothermal Rees Conditions\No refinement"
+
+              Welcome to ANSYS Fluent 2024 R2
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 13 2024 11:28:30 EST  Build Id: 10192  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "ClouDsBlade14" (win64).
+
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core  O.S.         PID    Vendor                                   
+-----------------------------------------------------------------------------------------
+n3    ClouDsBlade14  4/16  Windows-x64  27380  AMD Ryzen 9 5900HX with Radeon Graphics  
+n2    ClouDsBlade14  3/16  Windows-x64  13432  AMD Ryzen 9 5900HX with Radeon Graphics  
+n1    ClouDsBlade14  2/16  Windows-x64  21884  AMD Ryzen 9 5900HX with Radeon Graphics  
+n0*   ClouDsBlade14  1/16  Windows-x64  9948   AMD Ryzen 9 5900HX with Radeon Graphics  
+host  ClouDsBlade14        Windows-x64  17952  AMD Ryzen 9 5900HX with Radeon Graphics  
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\cvest\\Claudio\\Oxford\\3rd Year\\B3\\CubeSat_project\\Claudio\\Aerothermal\\CFD\\2d Sim\\No Refinement\\With new many axes\\Isothermal Rees Conditions\\No refinement\\cleanup-fluent-ClouDsBlade14-17952.bat
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/Isothermal Rees Conditions/Sixth Refinement/FFF.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v242\fluent\fluent24.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+Multicore SMT processors detected. Processor affinity set!
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/Isothermal Rees Conditions/Sixth Refinement/FFF.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+       60792 cells,     2 cell zones ...
+          57561 mixed cells,  zone id: 2
+           3231 mixed cells,  zone id: 4
+      102511 faces,     5 face zones ...
+          95202 2D interior faces,  zone id: 1
+            300 2D pressure-far-field faces,  zone id: 5
+            812 2D wall faces,  zone id: 6
+             12 2D parent-face faces,  zone id: 11
+           6185 2D parent-face faces,  zone id: 7
+       38753 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 13767/166 = 82.9337
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	interior-surface_body
+	walls
+	pressure_far_field
+	surface_body
+     parallel,
+Done.
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/Isothermal Rees Conditions/Sixth Refinement/FFF.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "ToolBar*Pointer*translate")
+(cx-use-window-id 51)
+(dolly-camera -0.0140926 -0.0391799 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00340524 -0.0130516 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00490209 0.182475 0)
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|wall_stanton"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|wall_skin_friction"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|wall_skin_friction"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|wall_skin_friction"))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table2*PushButton7(Load File)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 8))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 7))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 10))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 9))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 8))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 4))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList2" '( 11))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList2")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton3(Position on Y Axis)" #f)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton3(Position on Y Axis)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton2(Position on X Axis)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton2(Position on X Axis)")
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry1(X)" '( 1))
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry2(Y)" '( 0))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 4))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList2" '( 11))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Species (Off)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Species (Off)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Species (Off)"))
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame3" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame3" 1)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame3" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame3" 2)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame3" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 1)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 2)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 3)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 4)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 5)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 0)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 6)
+(cx-gui-do cx-activate-tab-index "Species Model*Table2*Frame4(PDF Table Creation)" 0)
+(cx-gui-do cx-activate-item "Species Model*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Multiphase (Off)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Multiphase (Off)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Multiphase (Off)"))
+(cx-gui-do cx-activate-item "Multiphase Model*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (On)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Radiation (Off)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Radiation (Off)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Radiation (Off)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Radiation (Off)"))
+(cx-gui-do cx-activate-item "Radiation Model*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Potential/Electrochemistry (Off)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (On)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (On)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Energy (On)"))
+(cx-gui-do cx-activate-item "Energy*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (SST k-omega)"))
+(cx-gui-do cx-activate-item "Viscous Model*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall"))
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 6)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 7)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 8)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 9)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 10)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-item "Wall*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|walls (wall, id=6)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|walls (wall, id=6)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|walls (wall, id=6)"))
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)
+(cx-gui-do cx-enable-apply-button "Wall")
+(cx-gui-do cx-set-toggle-button2 "Wall*Frame4*Frame2(Thermal)*Frame1*Frame1(Thermal Conditions)*ToggleBox1*Heat Flux" #t)
+(cx-gui-do cx-activate-item "Wall*Frame4*Frame2(Thermal)*Frame1*Frame1(Thermal Conditions)*ToggleBox1*Heat Flux")
+(cx-gui-do cx-set-toggle-button2 "Wall*Frame4*Frame2(Thermal)*Frame1*Frame1(Thermal Conditions)*ToggleBox1*via System Coupling" #t)
+(cx-gui-do cx-activate-item "Wall*Frame4*Frame2(Thermal)*Frame1*Frame1(Thermal Conditions)*ToggleBox1*via System Coupling")
+(cx-gui-do cx-set-toggle-button2 "Wall*Frame4*Frame2(Thermal)*Frame1*Frame1(Thermal Conditions)*ToggleBox1*Heat Flux" #t)
+(cx-gui-do cx-activate-item "Wall*Frame4*Frame2(Thermal)*Frame1*Frame1(Thermal Conditions)*ToggleBox1*Heat Flux")
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*PushButton1(Adapt)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Adapt)*Table1*PushButton1(Manual)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*Table1*Table2*Table1*PushButton2(Cell Registers)")
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Field Variable...")
+(cx-gui-do cx-set-list-selections "Field Variable Register*Table3*DropDownList1(Iso-Values of)" '( 3))
+(cx-gui-do cx-activate-item "Field Variable Register*Table3*DropDownList1(Iso-Values of)")
+(cx-gui-do cx-set-text-entry "Field Variable Register*TextEntry1(Name)" "temperature")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton5(Compute)")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+2 cells marked
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton2(Close)")
+(cx-gui-do cx-set-list-selections "Field Variable Register*Table3*DropDownList1(Iso-Values of)" '( 0))
+(cx-gui-do cx-activate-item "Field Variable Register*Table3*DropDownList1(Iso-Values of)")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+2 cells marked
+(cx-gui-do cx-activate-item "Wall*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton5(Compute)")
+(cx-gui-do cx-set-list-selections "Field Variable Register*Table3*DropDownList1(Iso-Values of)" '( 3))
+(cx-gui-do cx-activate-item "Field Variable Register*Table3*DropDownList1(Iso-Values of)")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton5(Compute)")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 3))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 0))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_determination"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_determination"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_determination"))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.11))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.11))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|top_boundary_layer_temperaature"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.13))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.13))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.11))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.11))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+/exit y
+(cx-gui-do cx-activate-item "Question*OK")
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  22:30:40, 21 Apr 2025 GMT Daylight Time 
+Total Transcript Time: 14 Hour 51 Minute 44 Second.

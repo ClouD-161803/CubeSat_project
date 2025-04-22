@@ -1,0 +1,122 @@
+Auto-Transcript Start Time:  15:05:53, 22 Mar 2025 Malay Peninsula Standard Time 
+Current Directory: "C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD"
+
+              Welcome to ANSYS Fluent 2024 R2
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 13 2024 11:28:30 EST  Build Id: 10192  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "ClouDsBlade14" (win64).
+
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core  O.S.         PID    Vendor                                   
+-----------------------------------------------------------------------------------------
+n3    ClouDsBlade14  4/16  Windows-x64  3700   AMD Ryzen 9 5900HX with Radeon Graphics  
+n2    ClouDsBlade14  3/16  Windows-x64  7676   AMD Ryzen 9 5900HX with Radeon Graphics  
+n1    ClouDsBlade14  2/16  Windows-x64  34056  AMD Ryzen 9 5900HX with Radeon Graphics  
+n0*   ClouDsBlade14  1/16  Windows-x64  4628   AMD Ryzen 9 5900HX with Radeon Graphics  
+host  ClouDsBlade14        Windows-x64  9584   AMD Ryzen 9 5900HX with Radeon Graphics  
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\cvest\\Claudio\\Oxford\\3rd Year\\B3\\CubeSat_project\\Claudio\\Aerothermal\\CFD\\cleanup-fluent-ClouDsBlade14-9584.bat
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v242\fluent\fluent24.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+Multicore SMT processors detected. Processor affinity set!
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+       47868 cells,     1 cell zone  ...
+          47868 mixed cells,  zone id: 2
+       80352 faces,     3 face zones ...
+          79252 2D interior faces,  zone id: 1
+            300 2D pressure-far-field faces,  zone id: 5
+            800 2D wall faces,  zone id: 6
+       32484 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 11271/147 = 76.6735
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	interior-surface_body
+	walls
+	pressure_far_field
+	surface_body
+     parallel,
+Done.
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Vectors"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+
+Enabling Lighting so that contour lines are visible.
+ Error in the fluent (fl) process : ended abnormally
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 4628 RUNNING AT ClouDsBlade14
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 34056 RUNNING AT ClouDsBlade14
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 7676 RUNNING AT ClouDsBlade14
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 3700 RUNNING AT ClouDsBlade14
+=   EXIT STATUS: 1073807364 (40010004)
+===================================================================================
+(cx-gui-do cx-activate-item "Question*OK")
+Auto-Transcript Stop Time:  14:34:46, 23 Mar 2025 Malay Peninsula Standard Time 
+Total Transcript Time: 23 Hour 28 Minute 53 Second.
