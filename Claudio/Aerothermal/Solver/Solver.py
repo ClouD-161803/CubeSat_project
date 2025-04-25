@@ -174,6 +174,10 @@ def create_heat_shield_simulation():
     export_data_to_file(time_points, temperature_profiles, x, ORBITAL_PERIOD,
                       surface_temps, back_temps, total_heat_flux)
     
+    # ===== ANIMATION =====
+    animate_temperature_evolution(time_points, temperature_profiles, x, ORBITAL_PERIOD,
+                                materials, thicknesses)
+    
     # ===== SUMMARY STATISTICS =====
     print_summary(time_points, temperature_profiles, surface_temps, back_temps, 
                  layer_indices, materials, max_service_temps, simulation_time, num_orbits)
@@ -511,7 +515,154 @@ def export_data_to_file(time_points, temperature_profiles, x, orbital_period, su
     print(f"Data for two orbital periods exported to {filename}")
 
 
+def animate_temperature_evolution(time_points, temperature_profiles, x, orbital_period, 
+                                 materials, thicknesses, filename="heat_shield_animation"):
+    """
+    Generate an animation of the temperature evolution through the heat shield
+    for two orbital cycles and save as GIF or MP4 file.
+    """
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import matplotlib.animation as animation
+    from matplotlib import rcParams
+    import os
+    
+    # Set larger font sizes
+    rcParams['font.size'] = 14
+    rcParams['axes.titlesize'] = 16
+    rcParams['axes.labelsize'] = 14
+    rcParams['xtick.labelsize'] = 12
+    rcParams['ytick.labelsize'] = 12
+    rcParams['legend.fontsize'] = 12
+    
+    # Filter data for only the first two orbital periods
+    max_time = 2 * orbital_period
+    indices = np.where(time_points <= max_time)[0]
+    
+    filtered_time = time_points[indices]
+    filtered_temp_profiles = temperature_profiles[indices]
+    
+    # Normalize time to orbital period for display
+    normalized_time = (filtered_time % orbital_period) / orbital_period
+    orbit_numbers = np.floor(filtered_time / orbital_period) + 1
+    
+    # Create figure and axes
+    fig, ax = plt.subplots(figsize=(12, 8))
+    
+    # Define colors for materials
+    colors = ['brown', 'lightblue', 'silver']
+    
+    # Plot material regions
+    cum_thickness = 0
+    for i, (material, thickness) in enumerate(zip(materials, thicknesses)):
+        start = cum_thickness
+        end = cum_thickness + thickness * 1000  # convert to mm
+        ax.axvspan(start, end, alpha=0.3, color=colors[i], label=material)
+        
+        # Add material label
+        y_pos = 0.05  # Position for material labels (normalized)
+        ax.text((start + end)/2, y_pos, material, ha='center', fontsize=12, 
+                transform=ax.get_xaxis_transform())
+        
+        cum_thickness = end
+    
+    # Find global temperature range for consistent y-axis
+    min_temp = np.min(filtered_temp_profiles)
+    max_temp = np.max(filtered_temp_profiles)
+    # Add 10% padding to the range
+    temp_range = max_temp - min_temp
+    min_temp -= temp_range * 0.1
+    max_temp += temp_range * 0.1
+    
+    # Initial empty line for temperature profile
+    line, = ax.plot([], [], 'k-', linewidth=3, label="Temperature")
+    
+    # Text for displaying time
+    time_text = ax.text(0.02, 0.95, '', transform=ax.transAxes, fontsize=14,
+                        bbox=dict(facecolor='white', alpha=0.7))
+    
+    # Set up plot
+    ax.set_xlim(0, np.sum(thicknesses) * 1000)  # x-axis in mm
+    ax.set_ylim(min_temp, max_temp)
+    ax.set_xlabel('Distance from Outer Surface (mm)', fontsize=14)
+    ax.set_ylabel('Temperature (°C)', fontsize=14)
+    ax.set_title('Temperature Evolution Through Heat Shield', fontsize=16)
+    ax.grid(True)
+    ax.legend(loc='upper right', fontsize=12)
+    
+    # Initialization function for animation
+    def init():
+        line.set_data([], [])
+        time_text.set_text('')
+        return line, time_text
+    
+    # Animation function
+    def animate(i):
+        x_data = x * 1000  # Convert to mm
+        y_data = filtered_temp_profiles[i]
+        line.set_data(x_data, y_data)
+        
+        # Update time text
+        orbit_text = f"Orbit: {orbit_numbers[i]:.0f}"
+        pos_text = f"Position: {normalized_time[i]:.2f}"
+        time_text.set_text(f"{orbit_text}\n{pos_text}")
+        
+        return line, time_text
+    
+    # Create animation - INCREASED INTERVAL for slower animation
+    print("Creating animation...")
+    anim = animation.FuncAnimation(fig, animate, init_func=init, 
+                                  frames=len(filtered_time),
+                                  interval=150,  # Increased from 50 to 150ms between frames
+                                  blit=True)
+    
+    # Try different writers in order of preference
+    success = False
+    
+    # Try FFmpeg first (MP4) - REDUCED FPS for slower animation
+    try:
+        print("Trying to save animation as MP4 using FFmpeg...")
+        writer = animation.FFMpegWriter(fps=10,  # Reduced from 30 to 10 fps
+                                      metadata=dict(artist='CubeSat Simulation'), 
+                                      bitrate=3600)
+        mp4_filename = filename + ".mp4"
+        anim.save(mp4_filename, writer=writer)
+        print(f"Animation saved to {mp4_filename}")
+        success = True
+    except Exception as e:
+        print(f"FFmpeg writer failed: {e}")
+        print("FFmpeg might not be installed. Trying another method...")
+    
+    # Try PillowWriter for GIF if FFmpeg failed - REDUCED FPS for slower animation
+    if not success:
+        try:
+            print("Trying to save animation as GIF using PillowWriter...")
+            gif_filename = filename + ".gif"
+            writer = animation.PillowWriter(fps=6)  # Reduced from 15 to 6 fps
+            anim.save(gif_filename, writer=writer)
+            print(f"Animation saved to {gif_filename}")
+            success = True
+        except Exception as e:
+            print(f"PillowWriter failed: {e}")
+    
+    # Try to save as HTML if all else fails
+    if not success:
+        try:
+            print("Trying to save animation as HTML5...")
+            html_filename = filename + ".html"
+            anim.save(html_filename, writer='html')
+            print(f"Animation saved to {html_filename}")
+            success = True
+        except Exception as e:
+            print(f"HTML writer failed: {e}")
+    
+    if not success:
+        print("Failed to save animation with any available writer.")
+        print("To create MP4 animations, please install FFmpeg and add it to your PATH.")
+        print("FFmpeg can be downloaded from: https://ffmpeg.org/download.html")
+    
+    plt.close(fig)  # Close the figure after saving
+
+
 if __name__ == "__main__":
     create_heat_shield_simulation()
-
-
