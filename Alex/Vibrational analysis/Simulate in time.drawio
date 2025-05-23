@@ -1,1 +1,76 @@
-<mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/></root></mxGraphModel>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.10">
+  <diagram id="1-1DhR_SuPQqTgsiJWfQ" name="Page-1">
+    <mxGraphModel dx="1884" dy="939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-1" target="QaB6diNXcl2Qd5uY2CEy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-1" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-2" target="QaB6diNXcl2Qd5uY2CEy-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-2" value="Input time steps (\(dt\)) and number of steps (\(n_{max}\))" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="180" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-4" target="QaB6diNXcl2Qd5uY2CEy-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-4" value="&lt;div&gt;Get external acceleration for&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;current time step&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;$$\ddot{X}_{0n}$$&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="280" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-8" target="QaB6diNXcl2Qd5uY2CEy-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-8" value="&lt;div&gt;Calculate internal acceleration from previous displacements.&lt;/div&gt;$$\ddot{X}_n = M^{-1}KX_{n-1}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="400" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-10" target="QaB6diNXcl2Qd5uY2CEy-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-10" value="&lt;div&gt;Update Velocity vector&lt;/div&gt;$$V_n = V_{n-1} - (\ddot{X}_{0n} + \ddot{X}_{n})*dt$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="510" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-12" target="QaB6diNXcl2Qd5uY2CEy-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-12" value="&lt;div&gt;Update displacement vector, relative to the fixed base&lt;/div&gt;$$X_n = X_{n-1} + V*dt - X_{0n-1}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="620" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-14" target="QaB6diNXcl2Qd5uY2CEy-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-14" value="Save displacement vector&lt;div&gt;Increment n&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="720" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-16" target="QaB6diNXcl2Qd5uY2CEy-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QaB6diNXcl2Qd5uY2CEy-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="870" />
+              <mxPoint x="650" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-16" value="Does \(n = n_{max}\)?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="820" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-18" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-22" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="550" y="840" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QaB6diNXcl2Qd5uY2CEy-23" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="910" width="40" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

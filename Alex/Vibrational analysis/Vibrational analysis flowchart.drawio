@@ -1,75 +1,76 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="24.8.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.10">
   <diagram name="Page-1" id="hLi_ZOelG5QED8GbM-7n">
-    <mxGraphModel dx="1434" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1884" dy="939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="WgvdX7-6PJQywKNukm8m-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-1" target="WgvdX7-6PJQywKNukm8m-2">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WgvdX7-6PJQywKNukm8m-1" target="WgvdX7-6PJQywKNukm8m-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-1" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-1" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="80" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-2" target="WgvdX7-6PJQywKNukm8m-4">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WgvdX7-6PJQywKNukm8m-2" target="WgvdX7-6PJQywKNukm8m-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-2" target="WgvdX7-6PJQywKNukm8m-18">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="rjpirj_WgAL8b8Byrukw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-2" target="rjpirj_WgAL8b8Byrukw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="250" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-2" value="Input CubeSat parameters: Floors; second moment of area; Youngs Modulus; total mass; vibrational PSD&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-2" value="Input CubeSat parameters: Floors; second moment of area; Youngs Modulus; total mass; vibrational PSD; time step (dt) and number of steps \(n_{max}\)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="275" y="180" width="270" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-4" target="WgvdX7-6PJQywKNukm8m-6">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="WgvdX7-6PJQywKNukm8m-4" target="WgvdX7-6PJQywKNukm8m-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-4" target="WgvdX7-6PJQywKNukm8m-8">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WgvdX7-6PJQywKNukm8m-4" target="WgvdX7-6PJQywKNukm8m-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-4" value="Fill elasticity matrix" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-4" value="Fill elasticity matrix" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="335" y="350" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-6" target="WgvdX7-6PJQywKNukm8m-15">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WgvdX7-6PJQywKNukm8m-6" target="WgvdX7-6PJQywKNukm8m-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-6" value="Calculate natural frequencies" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-6" value="Calculate natural frequencies" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="590" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-8" target="WgvdX7-6PJQywKNukm8m-10">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WgvdX7-6PJQywKNukm8m-8" target="WgvdX7-6PJQywKNukm8m-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-8" value="Simulate in time" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-8" value="Simulate in time" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="555" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-10" target="WgvdX7-6PJQywKNukm8m-12">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="WgvdX7-6PJQywKNukm8m-10" target="WgvdX7-6PJQywKNukm8m-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-10" value="Plot displacements of&amp;nbsp;&lt;div&gt;each floor over time&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-10" value="Plot displacements of&amp;nbsp;&lt;div&gt;each floor over time&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="330" y="650" width="160" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-12" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-12" value="End" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="760" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-15" value="Output&amp;nbsp; Natural Frequencies" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-15" value="Output&amp;nbsp; Natural Frequencies" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="590" y="460" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-18" target="WgvdX7-6PJQywKNukm8m-20">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-18" value="Generate m random signals from PSD" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="320" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-20" target="WgvdX7-6PJQywKNukm8m-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-20" value="Generate acceleration of base floor as a function of time" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="430" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="WgvdX7-6PJQywKNukm8m-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.025;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="WgvdX7-6PJQywKNukm8m-15" target="WgvdX7-6PJQywKNukm8m-12">
+        <mxCell id="WgvdX7-6PJQywKNukm8m-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.025;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="WgvdX7-6PJQywKNukm8m-15" target="WgvdX7-6PJQywKNukm8m-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="650" y="798" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="rjpirj_WgAL8b8Byrukw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rjpirj_WgAL8b8Byrukw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="160" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rjpirj_WgAL8b8Byrukw-1" value="Generate acceleration of base from PSD" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="310" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

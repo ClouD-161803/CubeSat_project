@@ -16,7 +16,7 @@ for i = 1:num
     j = 1;
 
     %find random frequency in range of PSD
-    frequency = range*0.0109563;    %0.0109563 replace with rand in 2 floor case for natural frequency test
+    frequency = range*rand();    %0.0109563 replace with rand in 2 floor case for natural frequency test
     %convert to radians and assign to signal
     randomSignals(1,i) = 2*pi*frequency;
 

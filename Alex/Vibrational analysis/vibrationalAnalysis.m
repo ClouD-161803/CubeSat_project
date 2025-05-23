@@ -4,19 +4,19 @@
 clear all
 close all
 %constants
-height = 200*10^(-3);%length of cubesat -mm
+height = 180*10^(-3);%length of cubesat -mm
 
 mass = 12; %mass of cubesat, distributed evenly between floors - kg
     %estimated off of 1.5kg/1U of cubesat
     
-floors = 2; %number of "floors" of the cubesat
+floors = 4; %number of "floors" of the cubesat
 
 props = 4; %vertical supports per layer of depth
 
 I = 3.385*10^-11; %second moment of area of prop - m^4
     %Currently for 5mm x 5mm x 2mm L section
 
-E = 70 * 10^9; %Youngs modulus for prop material - Pa
+E = 73 * 10^9; %Youngs modulus for prop material - Pa
     %Currenly for aluminium
 
 L = height/(floors - 1); %Length of individual prop - m
@@ -38,23 +38,23 @@ natFreqs = sqrt(eig(Kmatrix)/(m))/(2*pi);
 PSDpoints = [0 20 50 150 300 800 2000; 
             0.013 0.013 0.03 0.03 0.005 0.005 0.01];
 
-signals = PSDrandom(PSDpoints,1);
+signals = PSDrandom(PSDpoints,1000);
 
 %Simulate
 
 %number of time steps
-n = 4000;
+n = 200000;
 %time step
-t = 0.00025;
+dt = 0.00025;
 
 %Simulation time = n*t
 
 %find accelerations of base plate from random signals
-accelerations = getAcceleration(signals,n,t);
+accelerations = getAcceleration(signals,n,dt);
 
 %initialise internalAccel
-internalAccel = 0;
-vel = 0;
+internalAccel = transpose([0 0 0 0 ]);
+vel = [0 0];
 
 %initialise arrays
 
@@ -67,13 +67,13 @@ time = zeros(1,n);
 for step = 1:n
 
     
-     time(step) = step*t;
-     aVector = transpose([accelerations(step) 0]);
+     time(step) = step*dt;
+     aVector = transpose([accelerations(step) 0 0 0 ]);
 
     if step == 1
 
-        vel = (internalAccel + aVector)*t;
-        displacements(:,step) = -vel*t;
+        vel = (internalAccel + aVector)*dt;
+        displacements(:,step) = -vel*dt;
         
 
     end
@@ -81,9 +81,9 @@ for step = 1:n
     if step > 1
 
         internalAccel = (Mmatrix\Kmatrix*displacements(:,step - 1)) ;
-        vel = vel - (internalAccel + aVector)*t; 
-        displacements(:,step) = displacements(:,step - 1) + vel*t;
-        displacements(:,step) = displacements(:,step) - displacements(1,step);
+        vel = vel - (internalAccel + aVector)*dt; 
+        displacements(:,step) = displacements(:,step - 1) + vel*dt -displacements(1,step - 1);
+        %displacements(:,step) = displacements(:,step) - displacements(1,step);
         
     end
 
@@ -97,7 +97,7 @@ val_displacements = zeros(1,n);
 
 for step = 1:n
 
-    val_displacements(step) = (m*accelerations(step)*step*t)/(mass*natFreqs(2)*2*pi);
+    val_displacements(step) = (m*accelerations(step)*step*dt)/(mass*natFreqs(2)*2*pi);
 
 end
 
@@ -113,13 +113,14 @@ for c = 1:floors
      plot(displacements(c,:),time,colours(c));
      hold on
 end
-xlabel("Displacement/m")
-ylabel("Time/s")
+xlabel("Displacement/m","FontSize",20)
+ylabel("Time/s","FontSize",20)
 legend("Floor 1","Floor 2","Floor 3","Floor 4","Floor 5")
+title("Simulation of CubeSat floor displacements during Launch","FontSize",22)
 
 %plot validation
-plot(val_displacements,time,"b");
+%plot(val_displacements,time,"b");
 
-%figure
+figure
 
-%plot(accelerations,time)
+plot(accelerations,time)
