@@ -1,0 +1,489 @@
+Auto-Transcript Start Time:  12:39:41, 20 Mar 2025 Malay Peninsula Standard Time 
+Current Directory: "C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD"
+
+              Welcome to ANSYS Fluent 2024 R2
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 13 2024 11:28:30 EST  Build Id: 10192  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "ClouDsBlade14" (win64).
+
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core  O.S.         PID    Vendor                                   
+-----------------------------------------------------------------------------------------
+n3    ClouDsBlade14  4/16  Windows-x64  6236   AMD Ryzen 9 5900HX with Radeon Graphics  
+n2    ClouDsBlade14  3/16  Windows-x64  5192   AMD Ryzen 9 5900HX with Radeon Graphics  
+n1    ClouDsBlade14  2/16  Windows-x64  10116  AMD Ryzen 9 5900HX with Radeon Graphics  
+n0*   ClouDsBlade14  1/16  Windows-x64  9564   AMD Ryzen 9 5900HX with Radeon Graphics  
+host  ClouDsBlade14        Windows-x64  17776  AMD Ryzen 9 5900HX with Radeon Graphics  
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\cvest\\Claudio\\Oxford\\3rd Year\\B3\\CubeSat_project\\Claudio\\Aerothermal\\CFD\\cleanup-fluent-ClouDsBlade14-17776.bat
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v242\fluent\fluent24.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+Multicore SMT processors detected. Processor affinity set!
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+       47868 cells,     1 cell zone  ...
+          47868 mixed cells,  zone id: 2
+       80352 faces,     3 face zones ...
+          79252 2D interior faces,  zone id: 1
+            300 2D pressure-far-field faces,  zone id: 5
+            800 2D wall faces,  zone id: 6
+       32484 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 11271/147 = 76.6735
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	interior-surface_body
+	walls
+	pressure_far_field
+	surface_body
+     parallel,
+Done.
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-use-window-id 51)
+(handle-key "-")
+(cx-use-window-id 51)
+(handle-key "")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|pressure"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+
+Enabling Lighting so that contour lines are visible.
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 2))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-gui-do cx-activate-item "ToolBar*Pointer*translate")
+(cx-use-window-id 51)
+(dolly-camera -0.0774992 1.45976 0)
+(cx-use-window-id 51)
+(dolly-camera -0.509805 2.49014 0)
+(cx-use-window-id 51)
+(dolly-camera -0.185982 -1.04987 0)
+(cx-use-window-id 51)
+(dolly-camera -0.191774 0.0445987 0)
+(cx-use-window-id 51)
+(dolly-camera 0.130373 1.06427 0)
+(cx-use-window-id 51)
+(dolly-camera 0.408775 0.534169 0)
+(cx-use-window-id 51)
+(dolly-camera -0.269298 -0.270338 0)
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(dolly-camera 1.11104 -0.326296 0)
+(cx-use-window-id 51)
+(dolly-camera -0.172829 0.202583 0)
+(cx-use-window-id 51)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '(interior-surface_body) (cx-active-window))
+(cx-use-window-id 51)
+(dolly-camera 0.126298 -0.329198 0)
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+
+number tracked = 79252, escaped = 46434, incomplete = 32818
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(dolly-camera -0.0598252 -0.316537 0)
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines"))
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Pathlines|pathlines-1"))
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*Table1*DropDownList1(Color by)" '( 3))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*Table1*DropDownList1(Color by)")
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*Table1*DropDownList2" '( 6))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 79252, escaped = 46434, incomplete = 32818
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(dolly-camera 0.289105 -0.934056 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0593086 0.0306829 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00741357 -0.0115061 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0197695 -0.00470701 0)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Table1*PushButton10(More)")
+(cx-gui-do cx-set-toggle-button2 "Colormap*Table1*Frame5(Colormap)*Frame7(Colormap Background)*CheckButton1(Background Transparent)" #f)
+(cx-gui-do cx-activate-item "Colormap*Table1*Frame5(Colormap)*Frame7(Colormap Background)*CheckButton1(Background Transparent)")
+(cx-gui-do cx-activate-item "Colormap*PushButton2")
+(cx-gui-do cx-activate-item "Colormap*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(dolly-camera 0.000608131 0.00984614 0)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(dolly-camera -0.0760182 -0.00336742 0)
+(cx-use-window-id 51)
+(dolly-camera 0.039114 0.000631409 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00729243 -0.00378828 0)
+(cx-use-window-id 51)
+(dolly-camera 0.101105 0.000799153 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00251715 0.0151827 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0029366 0.0015982 0)
+(cx-gui-do cx-activate-item "ToolBar*Copy*savepicture")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/Pictures/Pathlines_no_refinement.png") "Hardcopy Files (*.png)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Colormap*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(dolly-camera -0.122811 0.117623 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0027754 0.00925129 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00138769 -0.0026432 0)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(dolly-camera -0.00368708 0.00118175 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00454681 0.000202596 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00294257 -0.000692196 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00154219 0.000624672 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00061156 0.000371426 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00477725 -0.00106358 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00119653 0.000438958 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00421887 -0.000776559 0)
+(cx-use-window-id 51)
+(dolly-camera -1.16332e-05 0.000631504 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00291025 -0.000903793 0)
+(cx-use-window-id 51)
+(dolly-camera -0.000460164 0.00036905 0)
+(cx-use-window-id 51)
+(dolly-camera -0.000381454 -0.000363283 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00109667 -0.000544935 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0145667 0.000408724 0)
+(cx-use-window-id 51)
+(dolly-camera 0.469906 -0.406124 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0152104 -0.00217971 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0202646 0.00381453 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0195732 -0.00313331 0)
+(cx-use-window-id 51)
+(dolly-camera 0.398353 -0.409127 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0160448 -0.00222512 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0157693 0.00409254 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0137561 -0.00036329 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0161163 -0.00385991 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00796279 0.00113528 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00100139 0.00481359 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0136607 -0.00190727 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0153296 -0.00385994 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0172368 -0.000317879 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0144951 0.00113528 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0138038 -0.00277009 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0169984 -0.00204351 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0138514 0.000454113 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0117535 -0.000908226 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0113005 0.000771992 0)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(dolly-camera -0.0104661 -0.000726581 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00722374 0.00118068 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0055072 0.000817396 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00781974 -0.000136234 0)
+(cx-use-window-id 51)
+(dolly-camera -0.015711 0.00186186 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00138276 0.000136234 0)
+(cx-gui-do cx-activate-item "ToolBar*Copy*savepicture")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Pathlines_BL_detail_front_no_refinement.png") "Hardcopy Files (*.png)")
+(cx-use-window-id 51)
+(dolly-camera 0.000238406 4.54113e-05 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00765286 -0.00254301 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0110382 0.000256658 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0067946 -0.00127151 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0103945 -0.000227056 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00884489 -0.000908218 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0107045 0.00131692 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0137084 0.00140774 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00858264 0.000544935 0)
+(cx-use-window-id 51)
+(dolly-camera 0.008082 -4.54113e-05 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00917867 0.000681169 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00944091 0.000317879 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00908332 0.0016348 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00841577 -9.08226e-05 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00624627 0.000454113 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0100846 0.000181645 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00927401 0.000272468 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00729525 -0.000771992 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00579329 -0.000181645 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00973283 0.000348359 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00739062 -0.000544935 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0084158 0.00385996 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00390983 0.00213433 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00541204 -0.00201142 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00322716 -0.00225393 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00142752 -0.000418305 0)
+(cx-use-window-id 51)
+(dolly-camera 0.000315726 -0.000601351 0)
+(cx-use-window-id 51)
+(dolly-camera -8.23885e-05 -0.000392191 0)
+(cx-gui-do cx-activate-item "ToolBar*Copy*savepicture")
+(cx-gui-do cx-activate-item "ToolBar*Copy*savepicture")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Pathlines_BL_detail_back_no_refinement.png") "Hardcopy Files (*.png)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)" '( 3))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")
+(cx-gui-do cx-set-toggle-button2 "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton4(Contour Lines)" #t)
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton4(Contour Lines)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(dolly-camera -0.0308547 0.0156545 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0172034 0.00397995 0)
+(cx-use-window-id 51)
+(dolly-camera -0.02382 0.00968455 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0380285 -0.0104806 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0233325 -0.00650062 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0259095 0.00252063 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0257702 0.00729658 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0735988 0.00228992 0)
+(cx-use-window-id 51)
+(dolly-camera -0.025646 0.0198451 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0216389 0.0366372 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0187002 0.0134845 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0129566 0.0157743 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0147254 0.0803551 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0835119 -0.00849987 0)
+(cx-use-window-id 51)
+(dolly-camera 0.116164 -0.0278903 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0532009 0.0390466 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0262748 0.00308931 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0337355 0.00370719 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0820958 -0.0128661 0)
+(cx-use-window-id 51)
+(dolly-camera 0.137162 -0.0116823 0)
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Table1*PushButton4(More)")
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*PushButton5(Colormap Options)")
+(cx-gui-do cx-set-toggle-button2 "Colormap*Table1*Frame5(Colormap)*Frame7(Colormap Background)*CheckButton1(Background Transparent)" #f)
+(cx-gui-do cx-activate-item "Colormap*Table1*Frame5(Colormap)*Frame7(Colormap Background)*CheckButton1(Background Transparent)")
+(cx-gui-do cx-activate-item "Colormap*PushButton2")
+(cx-use-window-id 51)
+(dolly-camera 0.315559 -0.484654 0)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(dolly-camera 0.103602 -0.00680468 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0414183 -0.00595411 0)
+(cx-use-window-id 51)
+(dolly-camera -0.032743 -0.0172049 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0185767 -0.019053 0)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(dolly-camera 0 -0.000907296 0)
+(cx-gui-do cx-activate-item "ToolBar*Copy*savepicture")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Temperature_no_refinement.png") "Hardcopy Files (*.png)")
+(cx-use-window-id 51)
+(dolly-camera -0.00120248 -0.0357305 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0472232 0.0314108 0)
+(cx-use-window-id 51)
+(dolly-camera 0.307645 0.0096591 0)
+(cx-use-window-id 51)
+(dolly-camera 1.24099 0.0315172 0)
+(cx-use-window-id 51)
+(dolly-camera 2.87497 -0.740657 0)
+(cx-use-window-id 51)
+(dolly-camera -1.34855 0.275777 0)
+(cx-use-window-id 51)
+(dolly-camera -1.96904 0.307294 0)
+(cx-use-window-id 51)
+(dolly-camera -0.120633 0.40744 0)
+(cx-use-window-id 51)
+(dolly-camera -0.202415 -0.0207286 0)
+(cx-use-window-id 51)
+(dolly-camera -0.242392 0.117855 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0210499 -0.037665 0)
+(cx-use-window-id 51)
+(dolly-camera -0.087075 0.00744234 0)
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "FFF.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+(cx-gui-do cx-activate-item "Question*OK")
+
+Writing to ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.cas.h5" in NODE0 mode and compression level 1 ...
+Grouping cells for Laplace smoothing ...
+       47868 cells,     1 zone  ...
+       80352 faces,     3 zones ...
+       32484 nodes,     1 zone  ...
+  Done.
+Done.
+
+Writing to ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Colormap*PanelButtons*PushButton2(Cancel)")
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  12:08:01, 21 Mar 2025 Malay Peninsula Standard Time 
+Total Transcript Time: 23 Hour 28 Minute 20 Second.

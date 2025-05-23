@@ -1,0 +1,167 @@
+Auto-Transcript Start Time:  22:17:25, 22 Apr 2025 GMT Daylight Time 
+Current Directory: "C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\2d Sim\No Refinement\With new many axes\Isothermal Rees Conditions\No refinement"
+
+              Welcome to ANSYS Fluent 2024 R2
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 13 2024 11:28:30 EST  Build Id: 10192  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "ClouDsBlade14" (win64).
+
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core  O.S.         PID    Vendor                                   
+-----------------------------------------------------------------------------------------
+n3    ClouDsBlade14  4/16  Windows-x64  86784  AMD Ryzen 9 5900HX with Radeon Graphics  
+n2    ClouDsBlade14  3/16  Windows-x64  87320  AMD Ryzen 9 5900HX with Radeon Graphics  
+n1    ClouDsBlade14  2/16  Windows-x64  79108  AMD Ryzen 9 5900HX with Radeon Graphics  
+n0*   ClouDsBlade14  1/16  Windows-x64  84544  AMD Ryzen 9 5900HX with Radeon Graphics  
+host  ClouDsBlade14        Windows-x64  86528  AMD Ryzen 9 5900HX with Radeon Graphics  
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\cvest\\Claudio\\Oxford\\3rd Year\\B3\\CubeSat_project\\Claudio\\Aerothermal\\CFD\\2d Sim\\No Refinement\\With new many axes\\Isothermal Rees Conditions\\No refinement\\cleanup-fluent-ClouDsBlade14-86528.bat
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/Isothermal Rees Conditions/Sixth Refinement/FFF.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v242\fluent\fluent24.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+Multicore SMT processors detected. Processor affinity set!
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/Isothermal Rees Conditions/Sixth Refinement/FFF.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+       60792 cells,     2 cell zones ...
+          57561 mixed cells,  zone id: 2
+           3231 mixed cells,  zone id: 4
+      102511 faces,     5 face zones ...
+          95202 2D interior faces,  zone id: 1
+            300 2D pressure-far-field faces,  zone id: 5
+            812 2D wall faces,  zone id: 6
+             12 2D parent-face faces,  zone id: 11
+           6185 2D parent-face faces,  zone id: 7
+       38753 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 13767/166 = 82.9337
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	interior-surface_body
+	walls
+	pressure_far_field
+	surface_body
+     parallel,
+Done.
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/Isothermal Rees Conditions/Sixth Refinement/FFF.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-activate-item "Report Definitions*Table1*ButtonBox3*PushButton1(New)")
+(cx-gui-do cx-activate-item "MenuBar*Force ReportSubMenu*Drag...")
+(cx-gui-do cx-set-list-selections "Drag Report Definition*Table1*Table2*List2(Zones)" '( 0))
+(cx-gui-do cx-activate-item "Drag Report Definition*Table1*Table2*List2(Zones)")
+(cx-gui-do cx-activate-item "Drag Report Definition*PanelButtons*PushButton6(Compute)")
+
+                              Cd                    
+-------------------------------- -------------------
+                           walls         0.018763651
+(cx-gui-do cx-activate-item "Drag Report Definition*PanelButtons*PushButton6(Compute)")
+
+                              Cd                    
+-------------------------------- -------------------
+                           walls         0.018763651
+(cx-gui-do cx-set-text-entry "Drag Report Definition*Table1*TextEntry3(Name)" "c_d")
+(cx-gui-do cx-activate-item "Drag Report Definition*Table1*TextEntry3(Name)")
+(cx-gui-do cx-activate-item "Drag Report Definition*PanelButtons*PushButton6(Compute)")
+
+                              Cd                    
+-------------------------------- -------------------
+                           walls         0.018763651
+(cx-gui-do cx-set-list-selections "Drag Report Definition*Table1*Table1*List3(Report Files)" '( 0))
+(cx-gui-do cx-activate-item "Drag Report Definition*Table1*Table1*List3(Report Files)")
+(cx-gui-do cx-activate-item "Drag Report Definition*PanelButtons*PushButton6(Compute)")
+
+                              Cd                    
+-------------------------------- -------------------
+                           walls         0.018763651
+(cx-gui-do cx-activate-item "Drag Report Definition*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-set-list-selections "Report Definitions*Table1*List1(Report Definitions)" '( 0))
+(cx-gui-do cx-activate-item "Report Definitions*Table1*List1(Report Definitions)")
+(cx-gui-do cx-set-list-selections "Report Definitions*Table1*List5(Used In)" '( 0))
+(cx-gui-do cx-activate-item "Report Definitions*Table1*List5(Used In)")
+(cx-gui-do cx-set-list-selections "Report Definitions*Table1*List5(Used In)" '( 2))
+(cx-gui-do cx-activate-item "Report Definitions*Table1*List5(Used In)")
+(cx-gui-do cx-activate-item "Report Definitions*Table1*PushButton4(Create Output Parameter)")
+(cx-gui-do cx-activate-item "Report Definitions*Table1*ButtonBox3*PushButton4(Compute)")
+
+                             Report Name                Value Unit
+                     -------------------  ------------------- -----
+                                     c_d          0.018763651 
+(cx-gui-do cx-activate-item "Report Definitions*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|c_d"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|c_d"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|c_d"))
+(cx-gui-do cx-set-integer-entry "Drag Report Definition*Table1*Table1*Table1(Options)*IntegerEntry7(Average Over)" 2)
+(cx-gui-do cx-activate-item "Drag Report Definition*Table1*Table1*Table1(Options)*IntegerEntry7(Average Over)")
+(cx-gui-do cx-set-integer-entry "Drag Report Definition*Table1*Table1*Table1(Options)*IntegerEntry7(Average Over)" 1)
+(cx-gui-do cx-activate-item "Drag Report Definition*Table1*Table1*Table1(Options)*IntegerEntry7(Average Over)")
+(cx-gui-do cx-activate-item "Drag Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-activate-item "Report Definitions*Table1*ButtonBox3*PushButton1(New)")
+(cx-gui-do cx-activate-item "MenuBar*Force ReportSubMenu*Lift...")
+(cx-gui-do cx-set-list-selections "Lift Report Definition*Table1*Table2*List2(Zones)" '( 0))
+(cx-gui-do cx-activate-item "Lift Report Definition*Table1*Table2*List2(Zones)")
+(cx-gui-do cx-activate-item "Lift Report Definition*PanelButtons*PushButton6(Compute)")
+
+                              Cl                    
+-------------------------------- -------------------
+                           walls      -8.8420379e-06
+(cx-gui-do cx-activate-item "Lift Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Report Definitions*PanelButtons*PushButton1(Close)")
+/exit y
+(cx-gui-do cx-activate-item "Question*OK")
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  18:18:41, 23 Apr 2025 GMT Daylight Time 
+Total Transcript Time: 20 Hour 1 Minute 16 Second.

@@ -1,0 +1,1132 @@
+Auto-Transcript Start Time:  16:25:54, 07 Apr 2025 Malay Peninsula Standard Time 
+Current Directory: "C:\Users\cvest\Claudio\Oxford\3rd Year\B3\CubeSat_project\Claudio\Aerothermal\CFD\2d Sim"
+
+              Welcome to ANSYS Fluent 2024 R2
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 13 2024 11:28:30 EST  Build Id: 10192  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "ClouDsBlade14" (win64).
+
+-----------------------------------------------------------------------------------------
+ID    Hostname       Core  O.S.         PID    Vendor                                   
+-----------------------------------------------------------------------------------------
+n3    ClouDsBlade14  4/16  Windows-x64  99540  AMD Ryzen 9 5900HX with Radeon Graphics  
+n2    ClouDsBlade14  3/16  Windows-x64  79456  AMD Ryzen 9 5900HX with Radeon Graphics  
+n1    ClouDsBlade14  2/16  Windows-x64  86972  AMD Ryzen 9 5900HX with Radeon Graphics  
+n0*   ClouDsBlade14  1/16  Windows-x64  99332  AMD Ryzen 9 5900HX with Radeon Graphics  
+host  ClouDsBlade14        Windows-x64  95904  AMD Ryzen 9 5900HX with Radeon Graphics  
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\cvest\\Claudio\\Oxford\\3rd Year\\B3\\CubeSat_project\\Claudio\\Aerothermal\\CFD\\2d Sim\\cleanup-fluent-ClouDsBlade14-95904.bat
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v242\fluent\fluent24.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+Multicore SMT processors detected. Processor affinity set!
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+       47868 cells,     1 cell zone  ...
+          47868 mixed cells,  zone id: 2
+       80352 faces,     3 face zones ...
+          79252 2D interior faces,  zone id: 1
+            300 2D pressure-far-field faces,  zone id: 5
+            800 2D wall faces,  zone id: 6
+       32484 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 11271/147 = 76.6735
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	interior-surface_body
+	walls
+	pressure_far_field
+	surface_body
+     parallel,
+Done.
+
+Reading from ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/FFF.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+
+Enabling Lighting so that contour lines are visible.
+(cx-use-window-id 51)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*PushButton5(Colormap Options)")
+(cx-gui-do cx-set-list-selections "Colormap*Table1*Frame4(Labels)*Frame3(Number Format)*DropDownList1(Type)" '( 1))
+(cx-gui-do cx-activate-item "Colormap*Table1*Frame4(Labels)*Frame3(Number Format)*DropDownList1(Type)")
+(cx-gui-do cx-set-integer-entry "Colormap*Table1*Frame4(Labels)*Frame3(Number Format)*IntegerEntry2(Precision)" 0)
+(cx-gui-do cx-activate-item "Colormap*Table1*Frame4(Labels)*Frame3(Number Format)*IntegerEntry2(Precision)")
+(cx-gui-do cx-set-list-selections "Colormap*Table1*Frame4(Labels)*Frame4(Font)*DropDownList1(Font Name)" '( 132))
+(cx-gui-do cx-activate-item "Colormap*Table1*Frame4(Labels)*Frame4(Font)*DropDownList1(Font Name)")
+(cx-gui-do cx-set-real-entry-list "Colormap*Table1*Frame4(Labels)*Frame4(Font)*RealEntry4(Font Size)" '( 0.04))
+(cx-gui-do cx-set-toggle-button2 "Colormap*Table1*Frame5(Colormap)*Frame7(Colormap Background)*CheckButton1(Background Transparent)" #f)
+(cx-gui-do cx-activate-item "Colormap*Table1*Frame5(Colormap)*Frame7(Colormap Background)*CheckButton1(Background Transparent)")
+(cx-gui-do cx-activate-item "Colormap*PushButton2")
+(cx-gui-do cx-set-real-entry-list "Colormap*Table1*Frame5(Colormap)*Frame6(Colormap Dimensions)*RealEntry1(Length)" '( 0.8))
+(cx-gui-do cx-set-real-entry-list "Colormap*Table1*Frame5(Colormap)*Frame6(Colormap Dimensions)*RealEntry2(Width Ratio)" '( 5.5))
+(cx-gui-do cx-set-list-selections "Colormap*Table1*DropDownList2(Titles)" '( 1))
+(cx-gui-do cx-activate-item "Colormap*Table1*DropDownList2(Titles)")
+(cx-gui-do cx-activate-item "Colormap*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Colormap*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "ToolBar*Pointer*translate")
+(cx-use-window-id 51)
+(dolly-camera 0.014062 0.0683011 0)
+(cx-use-window-id 51)
+(dolly-camera 0.0181927 0.0331462 0)
+(cx-use-window-id 51)
+(dolly-camera 0.00856537 -0.00296641 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0657241 -0.0178841 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0148925 0.00195629 0)
+(cx-gui-do cx-activate-item "ToolBar*Copy*savepicture")
+(cx-gui-do cx-set-toggle-button2 "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*ToggleBox1*CheckButton1(Use Window Resolution)" #f)
+(cx-gui-do cx-activate-item "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*ToggleBox1*CheckButton1(Use Window Resolution)")
+(cx-gui-do cx-set-list-selections "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*DropDownList3(Select Resolution)" '( 0))
+(cx-gui-do cx-activate-item "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*DropDownList3(Select Resolution)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/Pictures/Temperature_no_refinement4k.png") "Hardcopy Files (*.png)")
+(cx-gui-do cx-set-list-selections "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*DropDownList3(Select Resolution)" '( 3))
+(cx-gui-do cx-activate-item "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*DropDownList3(Select Resolution)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Temperature_no_refinement4k.png") "Hardcopy Files (*.png)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-set-list-selections "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*DropDownList3(Select Resolution)" '( 5))
+(cx-gui-do cx-activate-item "Save Picture*Table1*Frame3*Frame1*Frame3(Resolution)*Table1*DropDownList3(Select Resolution)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Temperature_no_refinement4k.png") "Hardcopy Files (*.png)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-use-window-id 51)
+(dolly-camera -0.065129 -0.0151708 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0114001 -0.0935396 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0150058 -0.0328028 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00948408 0.00851843 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0443245 0.00820453 0)
+(cx-use-window-id 51)
+(dolly-camera 0.228199 0.185018 0)
+(cx-use-window-id 51)
+(dolly-camera 0.010847 -0.00549849 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00135642 0.0103672 0)
+(cx-use-window-id 51)
+(dolly-camera -0.00182787 0.0273731 0)
+(cx-use-window-id 51)
+(dolly-camera -0.0072398 0.0399076 0)
+(cx-use-window-id 51)
+(dolly-camera -0.141947 -0.0660916 0)
+(cx-gui-do cx-set-toggle-button2 "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton2(Node Values)" #f)
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton2(Node Values)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton2(Node Values)" #t)
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton2(Node Values)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*PushButton4(New Surface)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuNewSurface*Line/Rake...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "boundary_layer_determination")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.2))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.105))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.105))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 3))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-1"))
+(cx-gui-do cx-set-text-entry "Contours*Table1*TextEntry2(Contour Name)" "yemperature")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 52)
+(dolly-camera -0.00190598 0.0225087 0)
+(cx-use-window-id 52)
+(dolly-camera 0.0888186 0.0181522 0)
+(cx-use-window-id 52)
+(dolly-camera -0.0591568 -0.0324309 0)
+(cx-use-window-id 52)
+(dolly-camera 0.0271296 0.0310634 0)
+(cx-use-window-id 52)
+(dolly-camera 0.00788739 -0.0307005 0)
+(cx-use-window-id 52)
+(dolly-camera 0.0239254 0.060918 0)
+(cx-use-window-id 52)
+(dolly-camera -0.0452805 0.0327744 0)
+(cx-use-window-id 52)
+(dolly-camera -0.0314977 0.0088518 0)
+(cx-use-window-id 52)
+(dolly-camera 0.0294875 0.0709798 0)
+(cx-use-window-id 52)
+(dolly-camera 0.00421252 -0.00987545 0)
+(cx-use-window-id 52)
+(dolly-camera -0.0949792 -0.0725696 0)
+(cx-use-window-id 52)
+(dolly-camera -0.00103215 0.0212976 0)
+(cx-use-window-id 52)
+(dolly-camera -0.0236311 -0.0464451 0)
+(cx-use-window-id 52)
+(dolly-camera -0.0118532 0.0129014 0)
+(cx-use-window-id 52)
+(dolly-camera 0.0181939 0.102004 0)
+(cx-use-window-id 52)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '(interior-surface_body) (cx-active-window))
+(cx-use-window-id 52)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-gui-do cx-set-text-entry "Solution XY Plot*Table1*TextEntry4(XY Plot Name)" "bow_normal")
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*PushButton4(New Surface)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuNewSurface*Line/Rake...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "bow_normal")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( -0.2))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Solution XY Plot*Table1*TextEntry4(XY Plot Name)" "temperature_plot")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/temperature_bow_normal") "XY Files (*.xy)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '())
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "temperature_boundary_layer_determination_y0.101") "XY Files (*.xy)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-text-entry "Contours*Table1*TextEntry2(Contour Name)" "temperature")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 53)
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|temperature_plot"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|temperature_plot"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|temperature_plot"))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*PushButton4(New Surface)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuNewSurface*Line/Rake...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "wall_y_normal_x00373")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.0373))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.0373))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.15))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0 4))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 4))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table1*List2(File Data)" '())
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*List2(File Data)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton2(Position on X Axis)" #f)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton2(Position on X Axis)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton3(Position on Y Axis)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton3(Position on Y Axis)")
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry2(Y)" '( 1))
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry1(X)" '( 0))
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 3))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList2" '( 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList2")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|wall_y_normal_x00373"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|wall_y_normal_x00373"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|wall_y_normal_x00373"))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|wall_y_normal_x00373"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-wall_y_normal_x00373*Edit...")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.168))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "temperature_boundary_layer_x00373_max") "XY Files (*.xy)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Line/Rake...")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-activate-item "Surfaces*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*PushButton4(New Surface)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuNewSurface*Line/Rake...")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.168))
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "boundary_layer_midpoint")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 1 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0 1 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 1 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #f)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 1 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList2" '( 0))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList2")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "max_bl_temperature_static") "XY Files (*.xy)")
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-use-window-id 52)
+(dolly-camera 0.0585962 -0.0546351 0)
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*PushButton4(New Surface)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuNewSurface*Iso-Surface...")
+(cx-gui-do cx-activate-item "Iso-Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*PushButton4(New Surface)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_midpoint"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 52)
+(dolly-camera 0.00137255 -0.00339869 0)
+(cx-use-window-id 52)
+(dolly-camera 0.00864706 -0.0222222 0)
+(cx-use-window-id 52)
+(dolly-camera 0.0311176 0.0587424 0)
+(cx-use-window-id 52)
+(dolly-camera 0 0.00105842 0)
+(cx-gui-do cx-activate-item "ToolBar*Copy*savepicture")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/Pictures/Temperature_no_refinement_to_side.png") "Hardcopy Files (*.png)")
+(cx-gui-do cx-activate-item "Save Picture*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|wall_y_normal_x00373"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-wall_y_normal_x00373*Edit...")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #t)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #f)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #t)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-use-window-id 52)
+(dolly-camera -0.00583456 -0.0216976 0)
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #f)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #t)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #f)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #t)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #f)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #t)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-use-window-id 52)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '(interior-surface_body) (cx-active-window))
+(cx-use-window-id 52)
+(dolly-camera -0.00166702 -0.00370444 0)
+(cx-use-window-id 52)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '(interior-surface_body) (cx-active-window))
+(cx-use-window-id 52)
+(cx-use-window-id 52)
+(cx-use-window-id 52)
+(cx-use-window-id 52)
+(cx-use-window-id 52)
+(cx-use-window-id 52)
+(dolly-camera 0 0 0)
+(cx-use-window-id 52)
+(dolly-camera 0 0 0)
+(cx-use-window-id 52)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #f)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #t)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-set-toggle-button2 "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)" #f)
+(cx-gui-do cx-activate-item "Line/Rake Surface*Table1*Frame2(Options)*CheckButton1(Line Tool)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Line/Rake...")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.168))
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.1")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.2")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.2))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.2))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.3")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.3))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.3))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.3))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.2"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.2"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.2"))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.2"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.2*Edit...")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.2))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.3"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.3"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.3"))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Line/Rake...")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.4))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.4))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.168))
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.4")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.6")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.6))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.6))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.7")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.7))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.7))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.8")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.1"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.1*Edit...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.01")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.01))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.01))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.2"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.2*Edit...")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.2"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.2*Edit...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.02")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.02))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.02))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.3"))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.3"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.3*Edit...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.03")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.03))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.03))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.4"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.4"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.4*Edit...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.04")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.04))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.04))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.6"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.6*Edit...")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.6"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.6*Edit...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.06")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.06))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.06))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.7"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|x0.7"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x0.7*Edit...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.07")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.07))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.07))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Line/Rake...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.08")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.08))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.08))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.168))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.09")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.09))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.09))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.1")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.1))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 1 3))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 3))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_midpoint"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-boundary_layer_midpoint*Edit...")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Line/Rake...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x0.05")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( 0.05))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.05))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.168))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|temperature"))
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 11))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12 13))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12 13 14))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12 13 14 15))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12 13 14 15 16))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12 13 14 15))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12 13 14))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12 13))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11 12))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7 8 9 10 11))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 8 9 10 11))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 8 9 11))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 8 9))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|temperature_plot"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|temperature_plot"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|temperature_plot"))
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '())
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 7 8))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 7 8 9))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 7 8 9 10))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5 7 8 9 10))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5 7 8 9 10 11))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5 7 8 9 10 11 13))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5 7 8 9 10 11 12 13))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5 7 8 9 10 11 12 13 14))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5 7 8 9 10 11 12 13 14 15))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 5 7 8 9 10 11 12 13 14 15 16))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 7 8 9 10 11 12 13 14 15 16))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "final_temp_comparison") "XY Files (*.xy)")
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_determination"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_determination"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces|boundary_layer_determination"))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.1))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+
+Error: Surface creation failed!
+
+Error Object: #f
+(cx-gui-do cx-activate-item "Error*OK")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+
+Error: Surface creation failed!
+
+Error Object: #f
+(cx-gui-do cx-activate-item "Error*OK")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( 0.10001))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.10001))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-XY Plot*New...")
+(cx-gui-do cx-set-text-entry "Solution XY Plot*Table1*TextEntry4(XY Plot Name)" "top_boundary_layer_temperaature")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 3))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-use-window-id 54)
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '())
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton4(Write to File)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/temperature_plot_x0to0.2_y0.10001") "XY Files (*.xy)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Line/Rake...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "front_bl_determination")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry1(x0)" '( -0.0001))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( -0.0001))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry2(y0)" '( -0.1))
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry5(y1)" '( 0.1))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-XY Plot*New...")
+(cx-gui-do cx-set-text-entry "Solution XY Plot*Table1*TextEntry4(XY Plot Name)" "front_bl_determination")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton2(Position on X Axis)" #f)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton2(Position on X Axis)")
+(cx-gui-do cx-set-toggle-button2 "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton3(Position on Y Axis)" #t)
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table1*ButtonBox1(Options)*CheckButton3(Position on Y Axis)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)" '( 3))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table2*DropDownList1(X Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 3))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry1(X)" '( 0))
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry2(Y)" '( 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry2(Y)" '( -1))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-real-entry-list "Solution XY Plot*Table1*Table2*ButtonBox1(Plot Direction)*RealEntry2(Y)" '( 1))
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-XY Plot*New...")
+(cx-gui-do cx-set-text-entry "Solution XY Plot*Table1*TextEntry4(XY Plot Name)" "temperature_across_shock")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 3))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 2))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|front_bl_determination"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|front_bl_determination"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Plots|XY Plot|front_bl_determination"))
+(cx-gui-do cx-activate-item "ToolBar*Copy*copytoclipboard")
+Copied screenshot of active window to clipboard
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/FFF.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+
+Writing to ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/FFF.cas.h5" in NODE0 mode and compression level 1 ...
+Grouping cells for Laplace smoothing ...
+       47868 cells,     1 zone  ...
+       80352 faces,     3 zones ...
+       32484 nodes,     1 zone  ...
+  Done.
+Done.
+
+Writing to ClouDsBlade14:"C:/Users/cvest/Claudio/Oxford/3rd Year/B3/CubeSat_project/Claudio/Aerothermal/CFD/2d Sim/No Refinement/With new many axes/FFF.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Adapt)*Table1*PushButton1(Manual)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*Table1*Table2*Table1*PushButton2(Cell Registers)")
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Field Variable...")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton5(Compute)")
+(cx-gui-do cx-set-list-selections "Field Variable Register*Table2*DropDownList1(Type)" '( 2))
+(cx-gui-do cx-activate-item "Field Variable Register*Table2*DropDownList1(Type)")
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 400000))
+(cx-gui-do cx-set-text-entry "Field Variable Register*TextEntry1(Name)" "pressure")
+(cx-gui-do cx-set-list-selections "Field Variable Register*Table2*DropDownList2(Derivative Option)" '( 1))
+(cx-gui-do cx-activate-item "Field Variable Register*Table2*DropDownList2(Derivative Option)")
+(cx-gui-do cx-set-list-selections "Field Variable Register*Table2*DropDownList1(Type)" '( 0))
+(cx-gui-do cx-activate-item "Field Variable Register*Table2*DropDownList1(Type)")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton5(Compute)")
+(cx-gui-do cx-set-text-entry "Field Variable Register*TextEntry1(Name)" "pressure_gradient_40000")
+(cx-gui-do cx-set-list-selections "Field Variable Register*Table2*DropDownList1(Type)" '( 2))
+(cx-gui-do cx-activate-item "Field Variable Register*Table2*DropDownList1(Type)")
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 40000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+572 cells marked
+(cx-use-window-id 54)
+(cx-use-window-id 54)
+(dolly-camera -0.0111319 -0.0212036 0)
+(cx-use-window-id 54)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-use-window-id 54)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 60000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+399 cells marked
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 70000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+342 cells marked
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 99000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+249 cells marked
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 120000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+202 cells marked
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 150000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+141 cells marked
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 160000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+129 cells marked
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 170000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+120 cells marked
+(cx-gui-do cx-set-real-entry-list "Field Variable Register*Table3*Table4*RealEntry14" '( 180000))
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+106 cells marked
+(cx-gui-do cx-activate-item "ToolBar*Pointer*translate")
+(cx-use-window-id 54)
+(dolly-camera 0.460723 1.12964 0)
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+106 cells marked
+(cx-gui-do cx-set-text-entry "Field Variable Register*TextEntry1(Name)" "pressure_gradient_180000")
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton3(Save/Display)")
+106 cells marked
+(cx-gui-do cx-activate-item "Field Variable Register*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-expression-entry "Manual Mesh Adaption*Table1*Table1*Table1*ExpressionEntry1(Refinement Criterion)" '("pressure_gradient_180000" . 5))
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*Table1*Table1*Table1*ExpressionEntry1(Refinement Criterion)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*Table1*Table2*Table1*PushButton1(Predefined Criteria)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*Table1*Table2*Table1*PushButton5(General Adaption Controls)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 3)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 4)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 5)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 6)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 7)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 8)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 9)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 10)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 11)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 12)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 13)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 14)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 15)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 16)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 17)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 18)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 19)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 20)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 21)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 22)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 23)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 24)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 25)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 26)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 27)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 28)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 29)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 30)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 31)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 32)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 33)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 34)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-set-integer-entry "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)" 35)
+(cx-gui-do cx-activate-item "General Adaption Controls*Table1*Table1*IntegerEntry1(Maximum Refinement Level)")
+(cx-gui-do cx-activate-item "General Adaption Controls*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton4(Display)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton1(Apply)")
+
+ Dump usage: 47868 cells, 80352 faces, 32484 nodes
+
+ Dump usage: 48186 cells, 80902 faces, 32716 nodes
+
+ Grid size ( original /   adapted /    change)
+     cells (    47868 /     48186 /       318)
+     faces (    80352 /     80902 /       550)
+     nodes (    32484 /     32716 /       232)
+
+Info: The hanging node adaption method will not be available for 2D cases in a future release of Fluent. The PUMA 2.5D adaption method can be used instead. To use PUMA 2.5D, convert the 2D mesh to a 3D mesh with a thickness of one cell layer, and enter the following text command:
+mesh/adapt/set/method puma-2.5d
+Support for the hanging node method is extended to the current release, in order to provide time for you to migrate your cases to the PUMA method.
+
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton1(Apply)")
+
+ Dump usage: 48186 cells, 80902 faces, 32716 nodes
+
+ Dump usage: 48939 cells, 82172 faces, 33233 nodes
+
+ Grid size ( original /   adapted /    change)
+     cells (    48186 /     48939 /       753)
+     faces (    80902 /     82172 /      1270)
+     nodes (    32716 /     33233 /       517)
+Info: The hanging node adaption method will not be available for 2D cases in a future release of Fluent. The PUMA 2.5D adaption method can be used instead. To use PUMA 2.5D, convert the 2D mesh to a 3D mesh with a thickness of one cell layer, and enter the following text command:
+mesh/adapt/set/method puma-2.5d
+Support for the hanging node method is extended to the current release, in order to provide time for you to migrate your cases to the PUMA method.
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton1(Apply)")
+
+>> Dividing domain into 4 partitions using Metis.
+   Time = 0.0150001 seconds.
+   Done.
+
+>> 4 Stored Partitions:
+   ----------------------------------------------------------------------
+   Collective Partition Statistics:        Minimum   Maximum   Total     
+   ----------------------------------------------------------------------
+   Cell count                              12385     13132     50430     
+   Mean cell count deviation               -1.8%     4.2%      
+   Partition boundary cell count           183       234       816       
+   Partition boundary cell count ratio     1.5%      1.8%      1.6%      
+
+   Face count                              20649     21619     84658     
+   Mean face count deviation               -2.9%     1.6%      
+   Partition boundary face count           191       238       427       
+   Partition boundary face count ratio     0.9%      1.2%      0.5%      
+
+   Cell weights                            1e+05     1e+05     5e+05     
+   Mean cell weight deviation              -4.6%     7.3%      
+
+   Partition neighbor count                2         3         
+   ----------------------------------------------------------------------
+   Partition Method                        Metis                                
+   Stored Partition Count                  4                                    
+Done.
+
+ Dump usage: 48939 cells, 82172 faces, 33233 nodes
+
+ Dump usage: 50430 cells, 84658 faces, 34228 nodes
+
+ Grid size ( original /   adapted /    change)
+     cells (    48939 /     50430 /      1491)
+     faces (    82172 /     84658 /      2486)
+     nodes (    33233 /     34228 /       995)
+Info: The hanging node adaption method will not be available for 2D cases in a future release of Fluent. The PUMA 2.5D adaption method can be used instead. To use PUMA 2.5D, convert the 2D mesh to a 3D mesh with a thickness of one cell layer, and enter the following text command:
+mesh/adapt/set/method puma-2.5d
+Support for the hanging node method is extended to the current release, in order to provide time for you to migrate your cases to the PUMA method.
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton1(Apply)")
+
+>> Dividing domain into 4 partitions using Metis.
+   Time = 0.013 seconds.
+   Done.
+
+>> 4 Stored Partitions:
+   ----------------------------------------------------------------------
+   Collective Partition Statistics:        Minimum   Maximum   Total     
+   ----------------------------------------------------------------------
+   Cell count                              13001     14088     53259     
+   Mean cell count deviation               -2.4%     5.8%      
+   Partition boundary cell count           170       272       912       
+   Partition boundary cell count ratio     1.3%      2.0%      1.7%      
+
+   Face count                              22035     22773     89368     
+   Mean face count deviation               -1.9%     1.4%      
+   Partition boundary face count           176       280       475       
+   Partition boundary face count ratio     0.8%      1.3%      0.5%      
+
+   Cell weights                            1e+05     1e+05     5e+05     
+   Mean cell weight deviation              -4.5%     4.1%      
+
+   Partition neighbor count                3         3         
+   ----------------------------------------------------------------------
+   Partition Method                        Metis                                
+   Stored Partition Count                  4                                    
+Done.
+
+ Dump usage: 50430 cells, 84658 faces, 34228 nodes
+
+ Dump usage: 53259 cells, 89368 faces, 36109 nodes
+
+ Grid size ( original /   adapted /    change)
+     cells (    50430 /     53259 /      2829)
+     faces (    84658 /     89368 /      4710)
+     nodes (    34228 /     36109 /      1881)
+Info: The hanging node adaption method will not be available for 2D cases in a future release of Fluent. The PUMA 2.5D adaption method can be used instead. To use PUMA 2.5D, convert the 2D mesh to a 3D mesh with a thickness of one cell layer, and enter the following text command:
+mesh/adapt/set/method puma-2.5d
+Support for the hanging node method is extended to the current release, in order to provide time for you to migrate your cases to the PUMA method.
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton1(Apply)")
+
+>> Dividing domain into 4 partitions using Metis.
+   Time = 0.013 seconds.
+   Done.
+
+>> 4 Stored Partitions:
+   ----------------------------------------------------------------------
+   Collective Partition Statistics:        Minimum   Maximum   Total     
+   ----------------------------------------------------------------------
+   Cell count                              14326     15058     58731     
+   Mean cell count deviation               -2.4%     2.6%      
+   Partition boundary cell count           172       243       769       
+   Partition boundary cell count ratio     1.2%      1.6%      1.3%      
+
+   Face count                              23872     25146     98491     
+   Mean face count deviation               -3.4%     1.7%      
+   Partition boundary face count           180       254       402       
+   Partition boundary face count ratio     0.7%      1.1%      0.4%      
+
+   Cell weights                            1e+05     2e+05     5e+05     
+   Mean cell weight deviation              -11.1%    13.1%     
+
+   Partition neighbor count                2         3         
+   ----------------------------------------------------------------------
+   Partition Method                        Metis                                
+   Stored Partition Count                  4                                    
+Done.
+
+ Dump usage: 53259 cells, 89368 faces, 36109 nodes
+
+ Dump usage: 58731 cells, 98491 faces, 39760 nodes
+
+ Grid size ( original /   adapted /    change)
+     cells (    53259 /     58731 /      5472)
+     faces (    89368 /     98491 /      9123)
+     nodes (    36109 /     39760 /      3651)
+Info: The hanging node adaption method will not be available for 2D cases in a future release of Fluent. The PUMA 2.5D adaption method can be used instead. To use PUMA 2.5D, convert the 2D mesh to a 3D mesh with a thickness of one cell layer, and enter the following text command:
+mesh/adapt/set/method puma-2.5d
+Support for the hanging node method is extended to the current release, in order to provide time for you to migrate your cases to the PUMA method.
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton2(Close)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Adapt)*Table1*PushButton1(Manual)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton4(Display)")
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton1(Apply)")
+
+>> Dividing domain into 4 partitions using Metis.
+   Time = 0.0149999 seconds.
+   Done.
+
+>> 4 Stored Partitions:
+   ----------------------------------------------------------------------
+   Collective Partition Statistics:        Minimum   Maximum   Total     
+   ----------------------------------------------------------------------
+   Cell count                              16761     18123     69366     
+   Mean cell count deviation               -3.3%     4.5%      
+   Partition boundary cell count           203       438       1282      
+   Partition boundary cell count ratio     1.2%      2.6%      1.8%      
+
+   Face count                              28360     30291     116217    
+   Mean face count deviation               -3.0%     3.7%      
+   Partition boundary face count           212       465       672       
+   Partition boundary face count ratio     0.7%      1.6%      0.6%      
+
+   Cell weights                            9e+04     2e+05     6e+05     
+   Mean cell weight deviation              -37.2%    17.6%     
+
+   Partition neighbor count                3         3         
+   ----------------------------------------------------------------------
+   Partition Method                        Metis                                
+   Stored Partition Count                  4                                    
+Done.
+
+ Dump usage: 58731 cells, 98491 faces, 39760 nodes
+
+ Dump usage: 69366 cells, 116217 faces, 46851 nodes
+
+ Grid size ( original /   adapted /    change)
+     cells (    58731 /     69366 /     10635)
+     faces (    98491 /    116217 /     17726)
+     nodes (    39760 /     46851 /      7091)
+Info: The hanging node adaption method will not be available for 2D cases in a future release of Fluent. The PUMA 2.5D adaption method can be used instead. To use PUMA 2.5D, convert the 2D mesh to a 3D mesh with a thickness of one cell layer, and enter the following text command:
+mesh/adapt/set/method puma-2.5d
+Support for the hanging node method is extended to the current release, in order to provide time for you to migrate your cases to the PUMA method.
+(cx-gui-do cx-activate-item "Manual Mesh Adaption*PanelButtons*PushButton2(Close)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton1(Display)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 54)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '(interior-surface_body) (cx-active-window))
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 54)
+(handle-key "control ??")
+(cx-use-window-id 54)
+(handle-key "control z")
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "FFF.cas.h5") "CFF Case Files (*.cas.h5 )")
+Multicore SMT processors detected. Processor affinity set!
+
+Error: wta(1st) to symbol->string
+Error Object: #f
