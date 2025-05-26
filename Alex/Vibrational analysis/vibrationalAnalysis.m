@@ -1,22 +1,22 @@
 %Vibrational analysis
 %Alex Berresford
 
-clear all
+
 close all
 %constants
-height = 180*10^(-3);%length of cubesat -mm
+height = 200*10^(-3);%length of cubesat -mm
 
 mass = 12; %mass of cubesat, distributed evenly between floors - kg
     %estimated off of 1.5kg/1U of cubesat
     
-floors = 4; %number of "floors" of the cubesat
+floors = 6; %number of "floors" of the cubesat
 
 props = 4; %vertical supports per layer of depth
 
 I = 3.385*10^-11; %second moment of area of prop - m^4
     %Currently for 5mm x 5mm x 2mm L section
 
-E = 73 * 10^9; %Youngs modulus for prop material - Pa
+E = 70 * 10^9; %Youngs modulus for prop material - Pa
     %Currenly for aluminium
 
 L = height/(floors - 1); %Length of individual prop - m
@@ -53,7 +53,7 @@ dt = 0.00025;
 accelerations = getAcceleration(signals,n,dt);
 
 %initialise internalAccel
-internalAccel = transpose([0 0 0 0 ]);
+internalAccel = transpose([0 0 0 0 0 0]);
 vel = [0 0];
 
 %initialise arrays
@@ -68,7 +68,7 @@ for step = 1:n
 
     
      time(step) = step*dt;
-     aVector = transpose([accelerations(step) 0 0 0 ]);
+     aVector = transpose([accelerations(step) 0 0 0 0 0]);
 
     if step == 1
 
@@ -113,10 +113,10 @@ for c = 1:floors
      plot(displacements(c,:),time,colours(c));
      hold on
 end
-xlabel("Displacement/m","FontSize",20)
-ylabel("Time/s","FontSize",20)
-legend("Floor 1","Floor 2","Floor 3","Floor 4","Floor 5")
-title("Simulation of CubeSat floor displacements during Launch","FontSize",22)
+xlabel("Displacement/m")
+ylabel("Time/s")
+legend("Floor 1","Floor 2","Floor 3","Floor 4","Floor 5","Floor 6","Floor 7")
+title("Simulation of CubeSat floor displacements during Launch")
 
 %plot validation
 %plot(val_displacements,time,"b");
